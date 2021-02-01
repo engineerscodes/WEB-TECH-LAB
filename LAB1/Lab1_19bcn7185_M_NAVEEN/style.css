@@ -1,0 +1,32 @@
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: blanchedalmond;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    clip-path: circle(100px at 50% 50%)
+}
+
+th{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+p{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: 2rem;
+    font-weight:  bolder;
+    margin-bottom: 30px;
+}
+
+table {
+   
+   margin: auto;
+   justify-content: center;
+   
+
+}

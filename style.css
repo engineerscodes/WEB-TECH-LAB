@@ -1,0 +1,33 @@
+.root{
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.Ltabel{
+  
+  border:  2px solid black;
+  margin: auto;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  color:teal;
+  overflow: hidden;
+}
+
+.Ltabel th{
+    background-color: rgb(12, 122, 61);
+   
+    border: 5px solid black;
+    color:white;
+
+    margin-bottom: 20px;
+    padding: 15px;
+    
+}
+
+td{
+    border: 5px solid black;
+    font-size: 1rem;
+    font-style: italic;
+}
