@@ -115,11 +115,14 @@ body{
     margin-top: 60px;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 25px;
+    
+    justify-items: center;
+    margin-bottom: 60px;
 
 }
 
 img {
-    width: 315px;
+    width: 300px;
     height: 315px;
 }
 
