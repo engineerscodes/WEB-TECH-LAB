@@ -72,3 +72,101 @@ body{
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
+.about .PersonAbout{
+    text-align: center;
+    list-style: none;
+}
+
+.about h1{
+    text-align: center;
+    margin :10px;
+}
+
+.about .PersonAbout li{
+    margin: 10px 0px 20px 0px;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+.ContainerEVENTGRID {}
+
+.EventH1 {
+
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    color: black;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.125em;
+
+   
+}
+
+.GRIDS {
+
+    display: grid;
+    margin-top: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+
+}
+
+img {
+    width: 315px;
+    height: 315px;
+}
+
+
+
+@media screen and (max-width :1450px) {
+    .GRIDS {
+
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+
+
+@media screen and (max-width :1080px) {
+    .GRIDS {
+
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: repeat(2, 320px);
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width :760px) {
+    .GRIDS {
+
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: 300px;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width :420px) {
+    .GRIDS {
+
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: 250px;
+        justify-content: center;
+    }
+
+    img {
+        width: 230px;
+    }
+}
