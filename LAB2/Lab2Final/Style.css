@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+.NavaLogo img{
+
+   width: 121px;
+   height: 50px;
+
+}
+
+.NavBarConatiner{
+    padding: 10px;
+    position: sticky;
+    z-index: 999;
+    box-shadow: 0px 0px 20px 0px #090909fa;
+    transition: background 1s ease;
+    background: #fff;
+   height: auto;
+}
+
+.NavBarWrapper{
+   
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    
+    max-width: 1200px;
+
+}
+
+.NavContext{
+    display: flex;
+    justify-content :center;
+    align-items: center;
+}
+.NavContext ul ,.NavContext ul li{
+      display: inline;
+      list-style: none;
+       
+}
+.NavContext ul li a{
+    text-decoration: none;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bolder;
+      margin-left: 24px;
+      color: black;
+}
+.NavBarsContent {
+
+}
+
+.NavBARSOICAL{
+    margin-left: 26px;
+    border-left: 2px solid #e1e1e1;
+    padding: 5px;
+   padding-left: 16px;
+   
+   
+}
+
+.INTRO{
+    background: black;
+    color: white;
+    width: 100%;
+}
+
+.INTROFLEX{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10%;
+}
+
+.IntroText{
+    margin-right: 10px;
+}
+.IntroText h2{
+    color: #01b7ff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 2px ;
+    margin-bottom: 15px;
+    font-weight: 500;
+   
+}
+
+.IntroText h1{
+    font-size: 64px;
+    color: #fff;
+    padding: 10px;
+  
+}
+
+
+
+.IntroText p{
+    line-height: 24px;
+    font-size: 17px;
+    color: white;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+
+
+.INTROIMAGE{
+    align-items: center;
+}
+
+.INTROIMAGE img{
+    clip-path: circle(230px at 50% 50%);
+    margin: 20px 0px;
+}
