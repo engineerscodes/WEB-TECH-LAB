@@ -245,4 +245,17 @@
 }
 
 
+@media screen and (max-width : 880px) {
+   .INFORMATIONS{
+       grid-template-columns: repeat(2,1fr);
+   }
+}
+
+@media screen and (max-width : 650px) {
+    .INFORMATIONS {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
 
