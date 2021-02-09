@@ -318,3 +318,87 @@
         margin-left: 5px;
     }
 }
+
+/*=================================================about sections=========================================*/
+
+.ProjectGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+     grid-gap: 50px 20px ;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.ProjectWrapper h1{
+        margin: 100px auto;
+        text-align: center;
+        padding: 20px;
+       
+}
+.ProjectGrid div{
+   display: inline-block;
+   padding: 30px;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   background: #fff;
+   width: 380px;
+   height: 380px;
+   
+   box-shadow: 5px 5px 10px 5px rgb(80, 77, 77);
+   z-index: 10;
+   transition: all 300ms ease-in;
+}
+
+.ProjectGrid div:hover{
+     
+    filter: brightness(120%)
+}
+
+.ProjectGrid div img{
+     width: 100%;
+     height: 100%;
+     border-radius: 10px;
+     box-shadow:2px 2px 2px 2px #6b6e6e;
+     z-index: 12;
+}
+
+
+@media screen and (max-width :1250px)
+{
+    .ProjectGrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width :830px) {
+    .ProjectGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media screen and (max-width :430px) {
+   
+    .ProjectGrid div{
+        display: flex;
+        width: 80%;
+        height: auto;
+        aspect-ratio: 1;
+        margin : auto ;
+        align-content: center;
+        align-self: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
