@@ -161,3 +161,35 @@
      border-color: #01b7ff;
 
 }
+
+
+@media screen and (max-width :1100px)
+{
+    .IntroText h1{
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width :1000px) {
+    .INTROFLEX{
+        flex-direction: column;
+    }
+
+
+    .INTROIMAGE img {
+      
+        margin: 100px 0px;
+    }
+}
+
+@media screen and (max-width : 550px)
+{
+   .ButtonFlex{
+      display: flex;
+      flex-direction: column;
+   }
+   #IntroG{
+       margin-top: 30px;
+   }
+}
+
