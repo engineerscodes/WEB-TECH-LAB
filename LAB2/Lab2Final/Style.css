@@ -392,12 +392,43 @@
 }
 
 
+/*       CONATACT   =================================================================================================================*/
+
+.callMe{
+    padding: 100px;
+}
+.CONTACTCARD{
+    width: 100%;
+     margin: auto;
+     align-items: center;
+     
+}
+
+.CONTACTCARD a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 36px;
+    margin: auto;
+    text-align: center;
+}
+
+.CONTACTCARD a:hover {
+    
+    color:#44f0b5;
+}
 
 
 
+@media screen and (max-width :550px)
+{
+    .CONTACTCARD a {
+        font-size: 1rem;
+    }
 
-
-
+}
 
 
 
