@@ -276,6 +276,12 @@
        flex-direction: column-reverse;
        text-align: center;
    }
+
+   .INTROIMAGE img{
+     width: 80%;
+
+      border-radius: 50%;
+   }
 }
 
 
@@ -293,3 +299,22 @@
 
 
 
+@media screen and (max-width :430px) {
+
+    .INFORMATIONS .git{
+        font-size: 15px;
+    }
+    .AutoInfo{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .NavBARSOICAL{
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    .NavContext ul li a{
+        margin-left: 5px;
+    }
+}
