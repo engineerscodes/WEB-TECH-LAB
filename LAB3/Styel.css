@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.event{
+
+    background-color: #000;
+}
+
+.GridConatiner{
+    display: grid;
+    
+    
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    height: auto;
+    grid-gap: 20px;
+    
+}
+
+.SECTIONS1{
+   position: relative;
+    width: 700px;
+    height: 400px;
+    padding: 10px;
+    background-color: rgb(22, 236, 190);
+    align-items: center;
+    display: inline;
+}
+
+.SECTIONS1 img{
+     position: absolute;
+     top: 2px;
+     left: 2px;
+    width: 200px;
+    height: 400px;
+    padding: 10px;
+}
+
+.SECTIONS1 p{
+    font-size: medium;
+    color: white;
+    position :absolute;
+    top: 20px;
+    left:210px ;
+    padding: 20px;
+}
+
+.SECTIONS1 button{
+    
+   
+   
+   color: white;
+   background-color: teal;
+   border: 2px solid white ;
+   padding: 20px;
+   
+   display: block;
+   margin: 10px;
+}
+
+.Btnflex{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 210px;
+}
