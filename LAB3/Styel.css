@@ -15,7 +15,7 @@
     
     align-items: center;
     justify-content: space-evenly;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(auto-fit,700px);
     width: 100%;
     height: auto;
     grid-gap: 20px;
@@ -69,4 +69,15 @@
     flex-direction: column;
     bottom: 0;
     left: 210px;
+}
+
+
+@media screen and (max-width :780px)
+{
+    .SECTIONS1{
+        width: 430px;
+    }
+    .GridConatiner{
+         grid-template-columns: repeat(auto-fit, 450px);
+    }
 }
