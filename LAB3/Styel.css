@@ -91,3 +91,62 @@
          grid-template-columns: repeat(auto-fit, 450px);
     }
 }
+
+
+@media screen and (max-width :430px) {
+    .SECTIONS1 {
+        width: 300px;
+        height: 650px;
+    }
+
+    .GridConatiner {
+        grid-template-columns: repeat(auto-fit, 300px);
+    }
+    .SECTIONS1 img{
+        width: 150px;
+    }
+    .SECTIONS1 h1 ,.SECTIONS1 p{
+      left :160px;
+    }
+    .Btnflex{
+        flex-direction: row;
+        left: 10px;
+    }
+}
+
+
+.FormConatiner{
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+    color: white;
+    position: relative;
+}
+
+.FormConatiner .info{text-align: center;}
+
+form{
+     width: 60%;
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 10px solid #fff;
+      margin: auto;
+
+}
+
+form .NAMESDET label{
+    
+    padding: 50px;
+}
+
+#GENDERS{
+     
+     padding: 50px;
+}
+
+.NAMESDET,.NAME{
+  margin: 50px;
+}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styel.css">
+    <title> REG </title>
+
+    <style>
+        button{
+  
+    margin: 25px;
+    font-size: 32px;
+    padding: 20px;
+}
+    </style>
+</head>
+<body>
+      <script>
+           function callme()
+           {
+               var name =document.getElementById("name").value;
+               var clg =document.getElementById("clgname").value;
+               var email=document.getElementById("email").value;
+               var phone=document.getElementById("num").value;
+                var male =document.getElementById("male");
+                var female=document.getElementById("female");
+                if(male.checked)
+                { var gender="MALE"}
+                else if(female.checked)
+                {
+                    var gender="FEMALE";
+                }
+                else
+                 var gender="Other"
+               alert("NAME :"+name +"\ncollege Name :"+clg+"\nEMAIL :"+email+"\nPHONE NUMBER :"+phone+"\nGender :"+gender);
+           }
+      </script>
+
+       <div class="FormConatiner"> 
+           <div class="info"><h1>REGISTRATION FORM </h1></div>
+           <form id="">
+                 <div class="NAMESDET" >
+                      <label for="name">NAME </label>
+                      <input type="text" min="1" max="30"  name="Name" id="name" required>
+                </div>
+                
+                <div class="NAME" >
+                   <label id="GENDERS" for="gender">Gender </label>
+                    
+                     <input type="radio" name="Gender" value="Male" id="male"  required>
+                      <label for="male">Male</label>
+
+                      <input type="radio" name="Gender" value="Female"  id="female"  required>
+                        <label for="female">FeMale</label>
+                      <input type="radio" name="Gender" value="Other" id="Other"   required>
+                        <label for="Other">Other</label> 
+                      
+                </div>
+                 
+                <div class="NAMESDET" >
+                    <label for="clgname">College </label>
+                    <input type="text" name="clgname" id="clgname"  required>
+                </div>
+
+                 <div class="NAMESDET" >
+                    <label for="email">EMAIL  </label>
+                    <input type="email" name="EMAIL" id="email" maxlength="30" required>
+                </div>
+
+                 <div class="NAMESDET" >
+                    <label for="num">TELEPHONE </label>
+                    <input type="number" name="number" id="num" maxlength="12" required>
+                </div>
+                
+                 <div class="NAMESDET" >
+                    <label for="COURSENAME">COURSE </label>
+                     <select id="clgname" name="COURSENAME"  required >
+                      <option value="B.TECH" >B.TECH</option>
+                      <option value="B.TECH" >BSC</option>
+                      <option value="B.TECH" >MBBS</option>
+                     </select>
+                </div>
+                 
+                <div class="NAMESDET" >
+                     <button type="submit" onclick="callme()">REGISTER</button>
+                     <button type="reset">RESET</button>
+                </div>
+           </form>
+       </div>
+</body>
+</html>
