@@ -41,6 +41,7 @@
     background: darkblue;
     border-radius: 20px;
     padding: 100px;
+    text-transform: uppercase;
 }
 
 
@@ -66,4 +67,7 @@
     margin-top: 20px;
     color: #fff;
     border-radius: 20px;
+}
+.hide{
+    display: none;
 }

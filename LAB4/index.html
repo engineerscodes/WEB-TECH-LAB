@@ -8,24 +8,69 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+        function hide()
+        {  
+               var lists=document.getElementById("list");
+               lists.classList.remove('hide');
+
+              var par=document.getElementById("par");
+               par.classList.add("hide");
+
+            
+               
+             
+             
+        }
+
+        function unhide()
+        {      var lists=document.getElementById("list");
+               lists.classList.add("hide");
+
+             var par=document.getElementById("par");
+              par.classList.remove('hide');
+
+              
+               
+        }
+
+
+    </script>
      
     <div class="Container">
          
         <div class="GRIDLINK">
              
             <div class="asides">
-               <div class="holder"> <a href=""> LIST</a>
-                <a href="">Para</a>
+               <div class="holder"> <a href="#"  role="button" onclick="hide()"> LIST</a>
+                <a href="#" onclick="unhide()">Para</a>
                 </div>
             </div>
             
-            <div class="Kill">
+            <div class="Kill" id="list">
 
                 <p>LIST TAG 
                     HTML lists allow web developers to group a set of related items in lists.<br>
                     Unordered HTML List<br>
                     Ordered HTML List<br>
                     HTML Description Lists<br>
+                </p>
+
+                <div class="me">
+                    <p>EXAMPLE </p>
+                    <P>list tag:</P>
+                    <input type="text" placeholder="<ol> <li> enter the text to render html </li> </ol>">
+
+                    <button>CLICK TO RENDER HMTL</button>
+                </div>
+
+
+            </div>
+
+             <div class="Kill hide" id="par">
+
+                <p>A paragraph always starts on a new line, and browsers automatically <br>add some white space (a margin) before and after a paragraph.
+                   
                 </p>
 
                 <div class="me">
