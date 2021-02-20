@@ -17,7 +17,8 @@
               var par=document.getElementById("par");
                par.classList.add("hide");
 
-            
+             var ele=document.getElementById("conect");
+             ele.classList.add('hide');
                
              
              
@@ -30,10 +31,40 @@
              var par=document.getElementById("par");
               par.classList.remove('hide');
 
-              
+            var ele=document.getElementById("conect");
+             ele.classList.add('hide');
                
         }
 
+        function getvalue()
+        {
+            var ele=document.getElementById("conect");
+            ele.classList.remove('hide');
+            var  list=document.getElementById("li").value;
+              ele.innerHTML=list;
+              console.log(list);
+              
+              var lists=document.getElementById("list");
+              var par=document.getElementById("par");
+               lists.classList.add("hide");
+               par.classList.add('hide');
+              ele.classList.add('Kill');
+        }
+
+         function getvalue2()
+        {
+            var ele=document.getElementById("conect");
+            ele.classList.remove('hide');
+            var  list=document.getElementById("li2").value;
+              ele.innerHTML=list;
+              console.log(list);
+              
+              var lists=document.getElementById("list");
+              var par=document.getElementById("par");
+               lists.classList.add("hide");
+               par.classList.add('hide');
+              ele.classList.add('Kill');
+        }
 
     </script>
      
@@ -59,9 +90,9 @@
                 <div class="me">
                     <p>EXAMPLE </p>
                     <P>list tag:</P>
-                    <input type="text" placeholder="<ol> <li> enter the text to render html </li> </ol>">
+                    <input  id="li" type="text" placeholder="<ol> <li> enter the text to render html </li> </ol>">
 
-                    <button>CLICK TO RENDER HMTL</button>
+                    <button  onclick="getvalue()">CLICK TO RENDER HMTL</button>
                 </div>
 
 
@@ -76,9 +107,9 @@
                 <div class="me">
                     <p>EXAMPLE </p>
                     <P>paragraph tag:</P>
-                    <input type="text" placeholder="<p> enter the text to render html </P>">
+                    <input   id="li2"  type="text" placeholder="<p> enter the text to render html </P>">
 
-                    <button>CLICK TO RENDER HMTL</button>
+                    <button onclick="getvalue2()">CLICK TO RENDER HMTL</button>
                 </div>
 
 
@@ -86,7 +117,10 @@
 
             
                 
-          
+             <div class="htmldis" id="conect">
+                 
+            
+             </div>
 
         </div>
          
