@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE -RUNER</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <script>
+      
+      function RENDER()
+      {
+          let TEXT=document.getElementById("code").value;
+          let HTMLS=document.getElementsByClassName('DISPLAY')[0];
+          HTMLS.innerHTML=TEXT;
+      }
+
+      function RESET(){
+          let HTMLS=document.getElementsByClassName('DISPLAY')[0];
+          HTMLS.innerHTML=null;
+      }
+
+   </script>
+    
+    <div class="ContainerCode">
+
+        <div>
+             <h1>WRITE YOUR CODE </h1>
+             <textarea name="codes" id="code" cols="30" rows="10" placeholder="TYPE HTML HERE"></textarea>
+
+             <button type="button" onclick="RENDER()">RUN </button>
+        </div>
+
+        <div >
+            <h1>HTML RENDERED  </h1>
+            <div class="DISPLAY">
+
+                 
+            </div>
+             <button type="reset" onclick="RESET()">RESET</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
