@@ -83,73 +83,73 @@
          <h1>PHOTOS </h1>
      </div>
 
-      <div class="ROT">
-           
-          <div class="al">
-              <img  id="FILTER"             alt="SONG"    height="250px" >
-              
-              <input type="text"  placeholder="ENTER URL" id="Take" required>
-            <div class="CENTER">
-              <button  id="bt1" type="button" onclick="UPDATE()" > Update </button>
-              <button  id="bt2" type="button" onclick="RENDERS()"> ALL </button></div>
-              
-          </div>
-           
-          <div class="gridIMG" id="INNERIMG">
-                 
-          </div>
+        <div class="ROT">
+            
+            <div class="al">
+                <img  id="FILTER"   alt="SONG"    height="250px" >
+                
+                <input type="text"  placeholder="ENTER URL" id="Take" required>
+                <div class="CENTER">
+                <button  id="bt1" type="button" onclick="UPDATE()" > Update </button>
+                <button  id="bt2" type="button" onclick="RENDERS()"> ALL </button></div>
+                
+            </div>
+            
+            <div class="gridIMG" id="INNERIMG">
+                    
+            </div>
       </div>
-       <script>
-      var count=0;
-      var imgSource=[];
-          
-       function addData()
-       {   
-           var input=document.getElementById("Take");
+        <script>
+                    var count=0;
+                    var imgSource=[];
+                        
+                    function addData()
+                    {   
+                        var input=document.getElementById("Take");
 
-           var imga=document.getElementById("FILTER");
-           
-          
-           imga.src="https://m.cricbuzz.com/a/img/v1/192x192/i1/c170661/virat-kohli.jpg"
-           imgSource.push(imga.src);
-           console.log(imgSource);
-           
-           
-        }
-       
-        addData();
+                        var imga=document.getElementById("FILTER");
+                        
+                        
+                        imga.src="https://m.cricbuzz.com/a/img/v1/192x192/i1/c170661/virat-kohli.jpg"
+                        imgSource.push(imga.src);
+                        console.log(imgSource);
+                        
+                        
+                        }
+                    
+                        addData();
 
-        function UPDATE()
-        {   var input=document.getElementById("Take");
-             
-            var imga=document.getElementById("FILTER");
-             if(input.value.length>0)
-             {imga.src=input.value;
-            imgSource.push(imga.src);
-            console.log(imgSource);
-         }
-        }
+                        function UPDATE()
+                        {   var input=document.getElementById("Take");
+                            
+                            var imga=document.getElementById("FILTER");
+                            if(input.value.length>0)
+                            {imga.src=input.value;
+                            imgSource.push(imga.src);
+                            console.log(imgSource);
+                        }
+                        }
 
-        function RENDERS()
-        {
-            let imgs=document.getElementById('INNERIMG');
-            imgs.innerHTML=""
-            imgSource.forEach((item, index)=>{
-                 let divs=document.createElement('div')
-                 let pic=document.createElement('img')
-               // imgs.appendChild(`<img src="${item.src}"  width="250px" height="250px">`);
-                 pic.src=item;
-                 pic.style.width="250px";
-                 pic.style.height="250px";
-                 divs.appendChild(pic);
-                 divs.style.backgroundColor="white";
-                 divs.style.padding="20px"
-                 divs.style.border="5px solid blue"
-                 imgs.appendChild(divs);
-            })
-              
-        }
-   </script>
+                        function RENDERS()
+                        {
+                            let imgs=document.getElementById('INNERIMG');
+                            imgs.innerHTML=""
+                            imgSource.forEach((item, index)=>{
+                                let divs=document.createElement('div')
+                                let pic=document.createElement('img')
+                            // imgs.appendChild(`<img src="${item.src}"  width="250px" height="250px">`);
+                                pic.src=item;
+                                pic.style.width="250px";
+                                pic.style.height="250px";
+                                divs.appendChild(pic);
+                                divs.style.backgroundColor="white";
+                                divs.style.padding="20px"
+                                divs.style.border="5px solid blue"
+                                imgs.appendChild(divs);
+                            })
+                            
+                        }
+                </script>
    <div class="olderer">
          
      </div>
