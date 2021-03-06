@@ -1,0 +1,46 @@
+<html>
+<head>
+<link rel="stylesheet" href="readXML.css" type="text/css">
+<title>
+Read the whole list
+</title>
+
+<script language="JavaScript">
+
+function findWriters() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    myFunction(this);
+    }
+  };
+  xhttp.open("GET", "writers.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var display="";
+  
+  var x = xmlDoc.getElementsByTagName("name");
+  for (i = 0; i <x.length; i++) {
+   display += x[i].textContent +"\n";;
+  }
+  
+  document.show.me.value=display;
+}
+
+</script>
+</head>
+<body>
+<span ID="blueBack">
+Read All Data
+</span>
+<div>
+<form name="show">
+<textarea name="me" cols=30
+rows=5></textarea><p>
+<input type="button" value="Show all" onClick="findWriters()">
+</form></div> 
+</body>
+</html>

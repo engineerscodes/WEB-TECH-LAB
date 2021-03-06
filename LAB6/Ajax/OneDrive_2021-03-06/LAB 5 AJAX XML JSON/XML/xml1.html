@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" href="readXML.css"
+type="text/css">
+<title>
+Read the whole list
+</title>
+<xml ID="writersXML" SRC="writers.xml"></xml>
+<script language="JavaScript">
+function findWriters() {
+   var myXML, myNodes;
+   var display="";
+   myXML= document.all("writersXML").XMLDocument;
+   //Put the <name> element into an object.
+   myNodes=myXML.getElementsByTagName("name");
+   //Extract the different values using a loop.
+   for(var counter=0;counter<myNodes.length;counter++) {
+      display += myNodes[counter].nodeValue +"\n";
+	 
+   }
+   document.show.me.value=display;
+} 
+</script>
+</head>
+<body>
+<span ID="blueBack">
+Read All Data
+</span>
+<div>
+<form name="show">
+<textarea name="me" cols=30
+rows=5></textarea><p>
+<input type="button" value="Show all" onClick="findWriters()">
+</form></div> 
+</body>
+</html>

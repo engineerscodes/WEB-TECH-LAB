@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Edited with XML Spy v4.2 -->
+
+<BOOK_MENU>
+    <CSE>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+    </CSE>
+
+    <ECE>
+        <BOOK>
+            <NAME>Hidden Figures</NAME>
+            <PUBSHISER>Margot Lee Shetterly </PUBSHISER>
+            <YEAR>2016</YEAR>
+            <DIS> The Untold Story of the African American Women Who Helped Win the Spac </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+    </ECE>
+
+    <MEC>
+        <BOOK>
+            <NAME>The Lord of the Rings</NAME>
+            <PUBSHISER>J. R. R. Tolkien </PUBSHISER>
+            <YEAR>29 July 1954</YEAR>
+            <DIS> The Lord of the Rings is an epic high fantasy novel by the English author and scholar
+                 J. R. R. Tolkien. Set in Middle-earth, the world at some distant time in the past, 
+                the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. 
+             </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+    </MEC>
+</BOOK_MENU>
