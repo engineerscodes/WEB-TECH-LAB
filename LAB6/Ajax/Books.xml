@@ -2,35 +2,37 @@
 
 <!-- Edited with XML Spy v4.2 -->
 
-<BOOK_MENU>
-    <CSE>
-        <BOOK>
-            <NAME>DRAKHOUND</NAME>
-            <PUBSHISER>CHITON </PUBSHISER>
-            <YEAR>50000 BC</YEAR>
-            <DIS> DRANK MAGIC  </DIS>
-        </BOOK>
-        <BOOK>
-            <NAME>DRAKHOUND</NAME>
-            <PUBSHISER>CHITON </PUBSHISER>
-            <YEAR>50000 BC</YEAR>
-            <DIS> DRANK MAGIC  </DIS>
-        </BOOK>
-        <BOOK>
-            <NAME>DRAKHOUND</NAME>
-            <PUBSHISER>CHITON </PUBSHISER>
-            <YEAR>50000 BC</YEAR>
-            <DIS> DRANK MAGIC  </DIS>
-        </BOOK>
-        <BOOK>
-            <NAME>DRAKHOUND</NAME>
-            <PUBSHISER>CHITON </PUBSHISER>
-            <YEAR>50000 BC</YEAR>
-            <DIS> DRANK MAGIC  </DIS>
-        </BOOK>
-    </CSE>
+<!DOCTYPE BOOK_MENU SYSTEM "BookDEF.dtd">
 
-    <ECE>
+<BOOK_MENU>
+    <CATEGORY dep="cse">
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DARK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+        <BOOK>
+            <NAME>DRAKHOUND</NAME>
+            <PUBSHISER>CHITON </PUBSHISER>
+            <YEAR>50000 BC</YEAR>
+            <DIS> DRANK MAGIC  </DIS>
+        </BOOK>
+    </CATEGORY >
+
+    <CATEGORY dep="ece">
         <BOOK>
             <NAME>Hidden Figures</NAME>
             <PUBSHISER>Margot Lee Shetterly </PUBSHISER>
@@ -55,9 +57,9 @@
             <YEAR>50000 BC</YEAR>
             <DIS> DRANK MAGIC  </DIS>
         </BOOK>
-    </ECE>
+    </CATEGORY>
 
-    <MEC>
+    <CATEGORY dep="mech">
         <BOOK>
             <NAME>The Lord of the Rings</NAME>
             <PUBSHISER>J. R. R. Tolkien </PUBSHISER>
@@ -85,5 +87,5 @@
             <YEAR>50000 BC</YEAR>
             <DIS> DRANK MAGIC  </DIS>
         </BOOK>
-    </MEC>
+    </CATEGORY>
 </BOOK_MENU>

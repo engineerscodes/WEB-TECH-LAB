@@ -14,7 +14,7 @@ bin-release/
 *.apk
 ./Panda
 ./Panda/
-./LAB6\Ajax\OneDrive_2021-03-06\LAB 5 AJAX XML JSON
+./LAB6/Ajax/OneDrive_2021-03-06/LAB 5 AJAX XML JSON
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
