@@ -4,6 +4,17 @@ let cseBOOKS=[],eceBOOKS=[],mechBOOKS=[];
 
 let booksitem = document.getElementById("gridbook");
 
+let cat=document.getElementById("CAT");
+
+let cat2 = document.getElementById("CAT2");
+
+function hide()
+{
+  cat2.style.display="none";
+  cat.style.display = "flex";
+}
+
+
 function getitems()
 {
    

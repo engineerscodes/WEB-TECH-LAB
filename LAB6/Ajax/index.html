@@ -13,26 +13,42 @@
       <div class="CONTAINER">
           <div class="HEADING">
                 
-                <h1>BOOKS -JSON</h1>
+                <h1>BOOKS -JSON/XML</h1>
                 
             </div>
+             
+               <div class="BUTTONDIV">
+                   <button onclick="hideXML()">load from JSON</button>
+                    <button onclick="hide()">load from XML</button>
+               </div> 
 
-            <div class="cat">
+            <div class="cat" id="CAT">
                  <ul>
-                    <li role="button" id="all" onclick="allbooks()">ALL BOOKS</li></ul>
-                   <ul> <li role="button" id="cse" onclick="csebooks()">CSE</li></ul>
-                   <ul>  <li role="button" id="ece" onclick="allece()">ECE</li></ul>
-                    <ul> <li role="button" id="mech" onclick="allmech()">MECH</li>
+                    <li role="button" id="all" onclick="allbooks()">ALL BOOKS XML</li></ul>
+                   <ul> <li role="button" id="cse" onclick="csebooks()">CSE XML</li></ul>
+                   <ul>  <li role="button" id="ece" onclick="allece()">ECE XML</li></ul>
+                    <ul> <li role="button" id="mech" onclick="allmech()">MECH XML</li>
                  </ul>
             </div>
-         
+
+             <div class="cat" id="CAT2">
+                 <ul>
+                    <li role="button" id="all" onclick="allbooksJSON()">ALL BOOKS JSON</li></ul>
+                   <ul> <li role="button" id="cse" onclick="csebooksJSON()">CSE JSON</li></ul>
+                   <ul>  <li role="button" id="ece" onclick="alleceJSON()">ECE JSON</li></ul>
+                    <ul> <li role="button" id="mech" onclick="allmechJSON()">MECH JSON</li>
+                 </ul>
+            </div>
+                 
+
                  <div class="books" id="gridbook">
 
                    </div>
+                 
 
       </div>
     <!--REMOVE THE COMMENT TO LOAD AJAX FOR XML and add comment to JSONAJAX-->
-    <!-- <script src="Ajax.js"></script> --> 
+    <script src="Ajax.js"></script>
   <script src="JSONAJAX.js"></script>
 </body>
 </html>

@@ -1,92 +1,96 @@
 
 
-let BooksArray = [];
-let cseBOOKS = [],
-  eceBOOKS = [],
-  mechBOOKS = [];
+let BooksArrayjson = [];
+let cseBOOKSjson = [],
+  eceBOOKSjson = [],
+  mechBOOKSjson = [];
 
-let booksitem = document.getElementById("gridbook");
+let booksitems = document.getElementById("gridbook");
+let cats = document.getElementById("CAT");
+let catjson = document.getElementById("CAT2");
 
-function getitems(){
-    
-    let xhr=new XMLHttpRequest();
-     
-      BooksArray = [];
-      (cseBOOKS = []), (eceBOOKS = []), (mechBOOKS = []);
-    xhr.open("GET", "Books.json", true);
-    
-    xhr.onreadystatechange =function()
-    {   
-        if(this.readyState ==4 && this.status ==200)
-        { 
-            var resp=JSON.parse(this.responseText);
 
-           for (i in resp.books) {
-               
-                var dep = resp.books[i].department;
-                var books =resp.books[i].book;
-                for (j in books)
-                {
-                    //console.log(books[i].name+"  hb");
-                    if (dep=="cse")
-                    {
-                        let temp = {
-                          name: books[j].name,
-                          PUBSHISER: books[j].PUBSHISER,
-                          YEAR: books[j].YEAR,
-                          dis: books[j].DISC,
-                        };
-                        cseBOOKS.push(temp);
-                    }
-                    
-                    if (dep == "ece") {
-                      let temp = {
-                        name: books[j].name,
-                        PUBSHISER: books[j].PUBSHISER,
-                        YEAR: books[j].YEAR,
-                        dis: books[j].DISC,
-                      };
-                      eceBOOKS.push(temp);
-                    }
+function hideXML() {
+  cats.style.display = "none";
+  catjson.style.display = "flex";
+}
 
-                    if (dep == "mech") {
-                      let temp = {
-                        name: books[j].name,
-                        PUBSHISER: books[j].PUBSHISER,
-                        YEAR: books[j].YEAR,
-                        dis: books[j].DISC,
-                      };
-                      mechBOOKS.push(temp);
-                    }
+function getitemsJSON() {
+  let xhr = new XMLHttpRequest();
 
-                    
-                }
-            }
+  BooksArrayjson = [];
+  (cseBOOKSjson = []), (eceBOOKSjson = []), (mechBOOKSjson = []);
+  xhr.open("GET", "Books.json", true);
 
-            BooksArray = BooksArray.concat(cseBOOKS, eceBOOKS, mechBOOKS);
+  xhr.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      var resp = JSON.parse(this.responseText);
+
+      for (i in resp.books) {
+        var dep = resp.books[i].department;
+        var books = resp.books[i].book;
+        for (j in books) {
+          //console.log(books[i].name+"  hb");
+          if (dep == "cse") {
+            let temp = {
+              name: books[j].name,
+              PUBSHISER: books[j].PUBSHISER,
+              YEAR: books[j].YEAR,
+              dis: books[j].DISC,
+            };
+            cseBOOKSjson.push(temp);
+          }
+
+          if (dep == "ece") {
+            let temp = {
+              name: books[j].name,
+              PUBSHISER: books[j].PUBSHISER,
+              YEAR: books[j].YEAR,
+              dis: books[j].DISC,
+            };
+            eceBOOKSjson.push(temp);
+          }
+
+          if (dep == "mech") {
+            let temp = {
+              name: books[j].name,
+              PUBSHISER: books[j].PUBSHISER,
+              YEAR: books[j].YEAR,
+              dis: books[j].DISC,
+            };
+            mechBOOKSjson.push(temp);
+          }
         }
+      }
+
+      BooksArrayjson = BooksArrayjson.concat(
+        cseBOOKSjson,
+        eceBOOKSjson,
+        mechBOOKSjson
+      );
     }
+  };
 
-    xhr.send();
+  xhr.send();
 }
 
 
-getitems();
+getitemsJSON();
 
 
 
-function allbooks() {
-  booksitem.innerHTML = "";
-  for (i in BooksArray) {
+function allbooksJSON() {
+  booksitems.innerHTML = "";
+  for (i in BooksArrayjson) {
     let div = document.createElement("div");
     let heading = document.createElement("h1");
     let author = document.createElement("h3");
     let year = document.createElement("h3");
     let dis = document.createElement("p");
-    heading.innerHTML = BooksArray[i].name;
-    author.innerHTML = BooksArray[i].PUBSHISER;
-    year.innerHTML = BooksArray[i].YEAR;
-    dis.innerHTML = BooksArray[i].DIS;
+    heading.innerHTML = BooksArrayjson[i].name;
+    author.innerHTML = BooksArrayjson[i].PUBSHISER;
+    year.innerHTML = BooksArrayjson[i].YEAR;
+    dis.innerHTML = BooksArrayjson[i].DIS;
     div.style.color = "white";
     div.style.textAlign = "center";
     div.style.border = "2px solid white";
@@ -97,22 +101,22 @@ function allbooks() {
     div.appendChild(year);
     div.appendChild(dis);
 
-    booksitem.appendChild(div);
+    booksitems.appendChild(div);
   }
 }
 
-function csebooks() {
-  booksitem.innerHTML = "";
-  for (i in cseBOOKS) {
+function csebooksJSON() {
+  booksitems.innerHTML = "";
+  for (i in cseBOOKSjson) {
     let div = document.createElement("div");
     let heading = document.createElement("h1");
     let author = document.createElement("h3");
     let year = document.createElement("h3");
     let dis = document.createElement("p");
-    heading.innerHTML = cseBOOKS[i].name;
-    author.innerHTML = cseBOOKS[i].PUBSHISER;
-    year.innerHTML = cseBOOKS[i].YEAR;
-    dis.innerHTML = cseBOOKS[i].DIS;
+    heading.innerHTML = cseBOOKSjson[i].name;
+    author.innerHTML = cseBOOKSjson[i].PUBSHISER;
+    year.innerHTML = cseBOOKSjson[i].YEAR;
+    dis.innerHTML = cseBOOKSjson[i].DIS;
     div.style.color = "white";
     div.style.textAlign = "center";
     div.style.border = "2px solid white";
@@ -123,22 +127,22 @@ function csebooks() {
     div.appendChild(year);
     div.appendChild(dis);
 
-    booksitem.appendChild(div);
+    booksitems.appendChild(div);
   }
 }
 
-function allece() {
-  booksitem.innerHTML = "";
-  for (i in eceBOOKS) {
+function alleceJSON() {
+  booksitems.innerHTML = "";
+  for (i in eceBOOKSjson) {
     let div = document.createElement("div");
     let heading = document.createElement("h1");
     let author = document.createElement("h3");
     let year = document.createElement("h3");
     let dis = document.createElement("p");
-    heading.innerHTML = eceBOOKS[i].name;
-    author.innerHTML = eceBOOKS[i].PUBSHISER;
-    year.innerHTML = eceBOOKS[i].YEAR;
-    dis.innerHTML = eceBOOKS[i].DIS;
+    heading.innerHTML = eceBOOKSjson[i].name;
+    author.innerHTML = eceBOOKSjson[i].PUBSHISER;
+    year.innerHTML = eceBOOKSjson[i].YEAR;
+    dis.innerHTML = eceBOOKSjson[i].DIS;
     div.style.color = "white";
     div.style.textAlign = "center";
     div.style.border = "2px solid white";
@@ -149,22 +153,22 @@ function allece() {
     div.appendChild(year);
     div.appendChild(dis);
 
-    booksitem.appendChild(div);
+    booksitems.appendChild(div);
   }
 }
 
-function allmech() {
-  booksitem.innerHTML = "";
-  for (i in mechBOOKS) {
+function allmechJSON() {
+  booksitems.innerHTML = "";
+  for (i in mechBOOKSjson) {
     let div = document.createElement("div");
     let heading = document.createElement("h1");
     let author = document.createElement("h3");
     let year = document.createElement("h3");
     let dis = document.createElement("p");
-    heading.innerHTML = mechBOOKS[i].name;
-    author.innerHTML = mechBOOKS[i].PUBSHISER;
-    year.innerHTML = mechBOOKS[i].YEAR;
-    dis.innerHTML = mechBOOKS[i].DIS;
+    heading.innerHTML = mechBOOKSjson[i].name;
+    author.innerHTML = mechBOOKSjson[i].PUBSHISER;
+    year.innerHTML = mechBOOKSjson[i].YEAR;
+    dis.innerHTML = mechBOOKSjson[i].DIS;
     div.style.color = "white";
     div.style.textAlign = "center";
     div.style.border = "2px solid white";
@@ -175,6 +179,6 @@ function allmech() {
     div.appendChild(year);
     div.appendChild(dis);
 
-    booksitem.appendChild(div);
+    booksitems.appendChild(div);
   }
 }

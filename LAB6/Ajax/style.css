@@ -20,6 +20,24 @@
 
 }
 
+.BUTTONDIV{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.BUTTONDIV button{
+ padding: 10px;
+ width: 200px;
+ height: 50px;
+ margin-left: 100px;
+ border-radius: 20px;
+ background-color: rgb(3, 3, 3);
+ color: white;
+ box-shadow:  2px 1px 5px  rgb(8, 206, 124);
+font-size: 16px;
+}
 .cat {
     display: flex;
     flex-direction: row;
