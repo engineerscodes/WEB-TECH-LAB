@@ -36,7 +36,7 @@ function getitemsJSON() {
               name: books[j].name,
               PUBSHISER: books[j].PUBSHISER,
               YEAR: books[j].YEAR,
-              dis: books[j].DISC,
+              dis: books[j].DISC
             };
             cseBOOKSjson.push(temp);
           }
@@ -46,7 +46,7 @@ function getitemsJSON() {
               name: books[j].name,
               PUBSHISER: books[j].PUBSHISER,
               YEAR: books[j].YEAR,
-              dis: books[j].DISC,
+              dis: books[j].DISC
             };
             eceBOOKSjson.push(temp);
           }
@@ -56,7 +56,7 @@ function getitemsJSON() {
               name: books[j].name,
               PUBSHISER: books[j].PUBSHISER,
               YEAR: books[j].YEAR,
-              dis: books[j].DISC,
+              dis: books[j].DISC
             };
             mechBOOKSjson.push(temp);
           }
@@ -90,7 +90,7 @@ function allbooksJSON() {
     heading.innerHTML = BooksArrayjson[i].name;
     author.innerHTML = BooksArrayjson[i].PUBSHISER;
     year.innerHTML = BooksArrayjson[i].YEAR;
-    dis.innerHTML = BooksArrayjson[i].DIS;
+    dis.innerHTML = BooksArrayjson[i].dis;
     div.style.color = "white";
     div.style.textAlign = "center";
     div.style.border = "2px solid white";
@@ -116,7 +116,7 @@ function csebooksJSON() {
     heading.innerHTML = cseBOOKSjson[i].name;
     author.innerHTML = cseBOOKSjson[i].PUBSHISER;
     year.innerHTML = cseBOOKSjson[i].YEAR;
-    dis.innerHTML = cseBOOKSjson[i].DIS;
+    dis.innerHTML = cseBOOKSjson[i].dis;
     div.style.color = "white";
     div.style.textAlign = "center";
     div.style.border = "2px solid white";
@@ -142,7 +142,7 @@ function alleceJSON() {
     heading.innerHTML = eceBOOKSjson[i].name;
     author.innerHTML = eceBOOKSjson[i].PUBSHISER;
     year.innerHTML = eceBOOKSjson[i].YEAR;
-    dis.innerHTML = eceBOOKSjson[i].DIS;
+    dis.innerHTML = eceBOOKSjson[i].dis;
     div.style.color = "white";
     div.style.textAlign = "center";
     div.style.border = "2px solid white";
@@ -168,7 +168,7 @@ function allmechJSON() {
     heading.innerHTML = mechBOOKSjson[i].name;
     author.innerHTML = mechBOOKSjson[i].PUBSHISER;
     year.innerHTML = mechBOOKSjson[i].YEAR;
-    dis.innerHTML = mechBOOKSjson[i].DIS;
+    dis.innerHTML = mechBOOKSjson[i].dis;
     div.style.color = "white";
     div.style.textAlign = "center";
     div.style.border = "2px solid white";
