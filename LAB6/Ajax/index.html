@@ -5,16 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJAX</title>
+
+    <link rel="stylesheet" href="style.css">
    
 </head>
 <body>
-      <div>
-           
-          <button >CLICK ME </button>
- 
+      <div class="CONTAINER">
+          <div class="HEADING">
+                
+                <h1>BOOKS -JSON</h1>
+                
+            </div>
+
+            <div class="cat">
+                 <ul>
+                    <li role="button" id="all" onclick="allbooks()">ALL BOOKS</li></ul>
+                   <ul> <li role="button" id="cse" onclick="csebooks()">CSE</li></ul>
+                   <ul>  <li role="button" id="ece" onclick="allece()">ECE</li></ul>
+                    <ul> <li role="button" id="mech" onclick="allmech()">MECH</li>
+                 </ul>
+            </div>
+         
+                 <div class="books" id="gridbook">
+
+                   </div>
 
       </div>
-
-      <script src="Ajax.js"></script>
+    <!--REMOVE THE COMMENT TO LOAD AJAX FOR XML and add comment to JSONAJAX-->
+    <!-- <script src="Ajax.js"></script> --> 
+  <script src="JSONAJAX.js"></script>
 </body>
 </html>
