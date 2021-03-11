@@ -1,3 +1,12 @@
 # WEB-TECH-LAB
 # LINK 
-https://engineerscodes.github.io/WEB-TECH-LAB/.
+
+
+
+<p align="center">
+  <b>https://engineerscodes.github.io/WEB-TECH-LAB/. </b>
+  <hr>
+  </br>
+ <img src="https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_mac.jpg" width="80%" height="500px">
+ 
+ </p>
