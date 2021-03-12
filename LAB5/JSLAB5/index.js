@@ -176,3 +176,19 @@ function Hen()
        imgs.appendChild(divs);
      });
 }
+
+
+
+let lis=document.getElementsByTagName('li')
+
+ for(let i=0;i<lis.length;i++)
+ {
+   
+   if (i%2==0) {
+     console.log(lis[i].innerHTML)
+     lis[i].style.backgroundColor="red";
+   }
+   else{
+
+   }
+ }
