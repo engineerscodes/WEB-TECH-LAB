@@ -1,0 +1,50 @@
+<HTML> 
+<HEAD> 
+	<TITLE>19BCD7097 Factors</TITLE> 
+</HEAD>
+<body>
+<script>
+	function fact()
+    {
+var n =parseInt(document.getElementById('num').value);
+var text = "";
+var i;
+for (i = 1; i <= n; i++){ 
+       if(n%i==0) {
+                text += i+" ";
+                                }
+                         }
+document.getElementById("factors").innerHTML = text;
+}
+
+ function chages(){
+
+     var checks=parseInt( document.getElementById('num').value);
+         if(typeof checks ==='number'){
+       
+     }
+     else{
+           alert(" ONLY NUMBER  ")
+     }
+ }
+</script>
+
+<center>
+    <font size=5>
+	<h1 style="color:#008000;">Factors <i>19BCD7097</i></h1>                       
+</center>
+
+	<form  name="factors"  Method= "get" Action= "URL" >
+		<label for="num">Enter the number :</label> <INPUT TYPE="Text" id="num" NAME="num" SIZE="15" MAXLENGTH="25" onchange="chages()"><br><br>
+		<label for="submit">Click Submit to display the factors of the integer:</label><br><br>
+        <button type="button" onclick="fact()">Submit</button> 
+        <INPUT TYPE="RESET" VALUE="Reset"> 
+    </form>
+    <p id="factors">
+
+    </p>
+
+</body> 
+</HTML>
+
+

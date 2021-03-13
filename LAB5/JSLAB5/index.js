@@ -192,3 +192,14 @@ let lis=document.getElementsByTagName('li')
 
    }
  }
+
+
+ let but=document.getElementsByTagName('button')[0]
+
+ but.addEventListener('click',callmenaveen)
+
+
+ 
+  function callmenaveen(){
+console.log("ejhvrbverhbvrhb")
+ }

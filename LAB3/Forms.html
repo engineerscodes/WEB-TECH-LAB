@@ -19,7 +19,8 @@
 <body>
       <script>
            function callme()
-           {
+           {  let timeID=document.forms['times'];
+              console.log(timeID['Name'].value);
                var name =document.getElementById("name").value;
                var clg =document.getElementById("clgname").value;
                var email=document.getElementById("email").value;
@@ -40,7 +41,7 @@
 
        <div class="FormConatiner"> 
            <div class="info"><h1>REGISTRATION FORM </h1></div>
-           <form id="">
+           <form id="" name="times"  action="#">
                  <div class="NAMESDET" >
                       <label for="name">NAME </label>
                       <input type="text" min="1" max="30"  name="Name" id="name" required>
