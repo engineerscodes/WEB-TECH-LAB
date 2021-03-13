@@ -1,0 +1,71 @@
+<HTML> 
+<HEAD> 
+	<TITLE>19BCD7097 Reg Form</TITLE> 
+</HEAD>
+<style>
+  body {background-color:#F0FFFF }
+  h1 {color:#000080}
+  label {color:#C71585;}
+  form {
+    font-family: 'Times New Roman', serif;
+       }
+</style>
+<body>
+	<center>
+    <font size=5>
+	  <h1>Registration Form <i>19BCD7097</i></h1>                       
+  </center>
+	<form  name="Reg" action="#"  Method= "POST" >
+		<label for="Uname">Username :</label> <INPUT required TYPE="Text"  onchange="UserName()" id="Uname" NAME="Uname" SIZE="15" MAXLENGTH="25"><br><br>
+    <label for="Pword">Password :</label> <INPUT required  TYPE="Password"  onchange="VerfiyPassword()" id="Pword" NAME="Pword" VALUE="" SIZE="15" MAXLENGTH="25"><br><br>
+    <label for="Pword1">Confirm Password :</label> <INPUT  required   onchange="VerfiyPassword()" TYPE="Password" id="Pword1" NAME="Pword1" VALUE="" SIZE="15" MAXLENGTH="25"><br><br>
+    <label for="pn">Phone number :</label> <INPUT required  TYPE="Text" id="pn" NAME="pn" SIZE="15" MAXLENGTH="10" minlength="10" onchange="checknumer()"><br><br>
+    <label for="em">e-mail :</label> <INPUT required  TYPE="Text" id="em" NAME="em" onchange="emailcheck()"  SIZE="30" MAXLENGTH="50"><br><br>   
+    <label for="submit">Click here to Submit the form :</label>
+    <INPUT TYPE="submit" VALUE="Submit"><br><br>
+    <label for="reset">Click here to Reset :</label> 
+    <INPUT TYPE="reset" VALUE="Reset"> 
+  </form> 
+  
+  <script>
+    
+    var DATAs=document.forms['Reg'];
+
+    function emailcheck()
+    {
+          if(!DATAs['em'].value.match(/^[a-zA-z]+@[a-z]+\.com$/))
+          {
+            alert("invalid email")
+          }
+    }
+    
+   function VerfiyPassword()
+   {   if(DATAs['Pword'].value.length>0 && DATAs['Pword1'].value.length>0)
+       if(DATAs['Pword'].value!=DATAs['Pword1'].value)
+       {   
+           alert("Password Not maching!!!!!!!")
+       }
+   }
+
+   function checknumer()
+   {
+     if(DATAs['pn'].value.length!=10)
+     {
+       alert("PHOONE NUMBER MUST BE 10 DIGIT ONLY")
+     }
+   }
+
+   function UserName(){
+     
+    if(DATAs['Uname'].value.match(/^[A-Za-z]+$/)){
+        console.log("Valid")
+    }
+    else{
+      alert("Invalid unsername")
+    }
+  }
+
+  </script>
+
+</body> 
+</HTML>
