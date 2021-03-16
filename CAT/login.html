@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+    
+      <div>
+          <div>
+              EMAIL<br> <input type="text" id="username" ><br>
+              Password <br> <input type="text" id="pass"> <br>
+              <input type="checkbox"> REMEMBER ME <br>
+              <button onclick="ATTACK()">ATTACK</button>
+          </div>
+      </div>
+     <script>
+         function ATTACK()
+    {
+             let res=new XMLHttpRequest();
+             res.open("GET","user.json",true);
+            
+             res.onreadystatechange =function()
+             {
+                if(this.readyState == 4 && this.status == 200)
+                {
+                   var resp = JSON.parse(this.responseText);
+                   var logindate=resp.login;
+                   console.log(logindate)
+                   var flag=1;
+                   for(var i=0;i<logindate.length;i++)
+                   {
+                       if(logindate[i].username ==document.getElementById('username').value){
+
+                        if(logindate[i].password==document.getElementById('pass').value)
+                        {
+                            alert("done "+logindate[i].username)
+                            flag=0;
+                            break;
+                        }
+                        else{
+                            alert("IN -CORRECT PASSWOR ")
+                            flag=0
+                        }
+                       }
+                      
+                   }
+                  if(flag==1)
+                   alert("INVALID USERNAME")
+                       
+                }
+             }
+               res.send()
+    }
+     </script>
+</body>
+</html>

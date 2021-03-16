@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <div>
+          <div>
+              EMAIL<br> <input type="text" id="username" ><br>
+              Password <br> <input type="text" id="pass"> <br>
+              <input type="checkbox"> REMEMBER ME <br>
+              <button onclick="ATTACK()">ATTACK</button>
+          </div>
+      </div>
+     <script>
+         function ATTACK()
+    {
+             let res=new XMLHttpRequest();
+             res.open("GET","./xmlUser.xml",true);
+            
+             res.onreadystatechange =function()
+             {
+                if(this.readyState == 4 && this.status == 200)
+                {
+                    var xmls=this.responseXML;
+                    var users=xmls.getElementsByTagName('user');
+                    var flag=1;
+                    for (let i=0;i<users.length;i++)
+                    {
+                        let xmluser=users[i].getElementsByTagName("uname")[0] .childNodes[0].nodeValue;
+                        let xmlpass=users[i].getElementsByTagName("pwd")[0].childNodes[0].nodeValue;
+                       
+                        if(xmluser==document.getElementById("username").value)
+                        {     console.log(xmlpass +" "+xmluser)
+                              if(xmlpass==document.getElementById("pass").value)
+                                 {
+                                     alert("successfull!!login")
+                                     flag=0;
+                                     break;
+                                 }
+                                else{
+                                    alert("IN-CORRECT PASSWORD")
+                                    flag=0;
+                                }
+                        }
+                    }
+                    if(flag ==1)
+                        alert("INVALID USER!!")
+                }
+            } 
+               res.send()
+    }
+     </script>
+</body>
+</html>

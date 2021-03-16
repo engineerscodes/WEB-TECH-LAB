@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE login SYSTEM  "USER.dtd">
+
+<login>
+   <user>
+       <uname>NAVEEN</uname>
+       <pwd>12345</pwd>
+   </user>
+    <user>
+        <uname>bala</uname>
+        <pwd>12345</pwd>
+    </user>
+</login>
