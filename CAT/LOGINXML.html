@@ -22,7 +22,7 @@
              res.open("GET","./xmlUser.xml",true);
             
              res.onreadystatechange =function()
-             {
+             {  
                 if(this.readyState == 4 && this.status == 200)
                 {
                     var xmls=this.responseXML;

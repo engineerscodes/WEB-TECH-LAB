@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!! NAVEEN !!</title>
+</head>
+<body>
+      <div style="border: solid green; border-width: 10px 2px 5px 1px;">
+          NAME :<input type="text" >
+
+          <button onclick="insert()">INSERT </button>
+          <button onclick="remove()">DELETE </button>
+          <button onclick="COLOR()">COLOR  </button>
+      </div>
+
+      <div >
+          <table class="VIEW" style="border: solid rgb(241, 21, 113); border-width: 10px 2px 5px 1px;" ></table>
+      </div>
+</body>
+
+<script>
+    let lists=document.getElementsByClassName('VIEW')[0];
+      let name=document.getElementsByTagName('input')[0]
+      
+    function insert(){
+      var div=document.createElement('tr')
+      var lichild =document.createElement('td');
+      var tr2=document.createElement('td');
+      tr2.innerHTML="HEELO WORLD"
+      lichild.innerHTML=name.value;
+      name.value=""
+      div.appendChild(lichild) ;
+      div.appendChild(tr2)
+      
+      lists.appendChild(div);
+
+    }
+
+    function remove()
+    {
+        lists.removeChild(lists.lastChild)
+    }
+
+    function COLOR()
+    {     var listcolor=lists.childNodes
+          console.log(listcolor)
+         for(var i=0;i<lists.childNodes.length;i++)
+         {
+             if((i+1)%2==1)
+             {
+                listcolor[i].style.backgroundColor="blue"
+             }
+         }
+    }
+</script>
+
+</html>
