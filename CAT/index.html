@@ -6,25 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-      
-    </style>
+
 
 </head>
 <body>
       <div>
-           <form method="GET" name="CARS">
-        <select name="CAR" id="carno" style="width: 250px; height: 500px;" >
+           <form method="GET" action="#" name="CARS">
+        <select name="CAR" id="carno" style="width: 250px; height: 500px;" multiple  required>
   
            <option value="BMW"   >BMW</option>
            <option value="BMW" >BMW</option>
            <option value="BMW" >BMW</option>
-           <option value="BMW" selected >TESLA</option>
-           <option value="BMW" >BMW</option>
+           <option value="TESLA">TESLA</option>
+           <option value="EFH" >HULK</option>
 
         </select>
-         
+           <button type="submit" onclick="killme()">SUMIT </button>
         </form>  
       </div>
+      
+    <script >
+   function killme(){
+        var cars=document.getElementById('carno');
+        console.log(cars.value)
+        
+        var myform=document.forms['CARS'];
+        console.log(myform['CAR'].value)
+        myform['CAR'].value="EFH"
+        alert(myform['CAR'].value)
+   }
+    </script>
 </body>
 </html>

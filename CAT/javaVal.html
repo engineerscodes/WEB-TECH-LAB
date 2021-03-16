@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form name="VAL" action="#" method="POST" onsubmit="return checkUser(event)">
+        USERNAME  <br> <input name="USERNAME" type="text" > <br>
+        EMAIL   <br>  <input name="Password"  ><br>
+
+        PHONE <br><input type="number" name="PHONENUMBER" ><br>
+
+        Message <br> <textarea name="message" placeholder="ENTER YOUR MESSAGE" style="resize: none;"></textarea>
+          
+        <br>
+        <button type="submit" >SUMBIT</button>
+    </form>
+
+</body>
+
+<script>
+ function checkUser( e)
+     {var myuser=document.forms['VAL'];
+     var  names=['name','email','Phone number','message'];
+     console.log(myuser.length)
+     for (var i=0;i<myuser.length -1;i++)
+     {
+           var content =myuser[i].value;
+           
+           if(content.length==0)
+           {  
+               alert(names[i]+"LENGTH CANNOT BE ZERO")
+               e.preventDefault();
+               return false;
+           }
+           if(i==1)
+           {
+               if(!content.match(/^[a-zA-Z0-9]+@[a-z]+\.[a-z]+$/)){
+                   alert("INVALID MAIL")
+                   e.preventDefault();
+                   return false;
+               }
+           }
+         if(i==3){
+            if( content.length >130)
+            {
+                alert(" MESSGAE LENGTH CANNOT BE MORE THAN 130 ")
+               e.preventDefault();
+               return false;
+            }
+         }
+     }
+     return true;
+    }
+
+</script>
+</html>
