@@ -1,0 +1,28 @@
+{
+    "ques":[
+        {
+            "questions":" India is a federal union comprising twenty-nine states and how many union territories",
+             "opitions":"6,7,8,9",
+             "ans":"7",
+             "id":1
+        },
+        {
+            "questions":"Which is the largest coffee producing state of India",
+             "opitions":"Kerala,Tamil Nadu,Karnataka,Arunachal Pradesh",
+             "ans":"Karnataka",
+             "id":2
+        },
+        {
+            "questions":"Which state has the largest area",
+             "opitions":"Maharashtra,Madhya Pradesh,Uttar Pradesh,Rajasthan",
+             "ans":"Rajasthan",
+             "id":3
+        },
+        {
+            "questions":"In what state is the Elephant Falls located?",
+             "opitions":"Mizoram,Meghalaya,Orissa,Manipur",
+             "ans":"Meghalaya",
+             "id":4
+        }
+    ]
+}
