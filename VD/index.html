@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="video" controls="controls">
+    <source src="demo2.mkv" />
+</video>
+ 
+<button id="capture">Capture</button>
+ 
+<div id="output"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+ 
+    var video, $output;
+    var scale =1;
+ 
+    var initialize = function() {
+        $output = $("#output");
+        video = $("#video").get(0);
+        $("#capture").click(captureImage);                
+    };
+ 
+    var captureImage = function() {
+        var canvas = document.createElement("canvas");
+        canvas.width = video.videoWidth * scale;
+        canvas.height = video.videoHeight * scale;
+        canvas.getContext('2d')
+              .drawImage(video, 0, 0, canvas.width, canvas.height);
+ 
+        var img = document.createElement("img");
+        img.src = canvas.toDataURL();
+        $output.prepend(img);
+    };
+            
+     initialize();
+
+</script>
+</body>
+</html>
