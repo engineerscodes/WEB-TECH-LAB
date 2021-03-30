@@ -7,27 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-    <video id="video" controls="controls">
-    <source src="demo2.mkv" />
-</video>
- 
-<button id="capture">Capture</button>
+
+   
+<button id="capture" >Capture</button>
+
+Select a file to upload:
+<input type="file" id="myFile" size="50" >
+
+<p>Click the button below do the display the file path of the file upload button above (you must select a file first).</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
  
 <div id="output"></div>
+
+ <video id="video2" controls="controls" src="">
+
+ </video>
+
+<script>
+    function myFunction() {
+  var x = document.getElementById("myFile").files[0];
+  console.log(x)
+  document.getElementById("demo").innerHTML = x;
+  var fileUrl = window.URL.createObjectURL(x)
+  var obj=document.getElementById('video2');
+  obj.src=fileUrl;
+}
+</script>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
 
  
+  
     var video, $output;
     var scale =1;
  
     var initialize = function() {
-        $output = $("#output");
-        video = $("#video").get(0);
+        
         $("#capture").click(captureImage);                
     };
- 
+  
     var captureImage = function() {
+        $output = $("#output");
+        video  = $('#video2').get(0);
         var canvas = document.createElement("canvas");
         canvas.width = video.videoWidth * scale;
         canvas.height = video.videoHeight * scale;
@@ -40,6 +65,7 @@
     };
             
      initialize();
+
 
 </script>
 </body>
