@@ -60,7 +60,7 @@
               .drawImage(video, 0, 0, canvas.width, canvas.height);
  
         var img = document.createElement("img");
-        
+        img.setAttribute('name','THUMBNAILIMAGE');
         img.src = canvas.toDataURL();
         $output.prepend(img);
     };

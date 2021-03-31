@@ -1,0 +1,23 @@
+<CATALOG>
+<Emp>
+<EmpName> Chandra Mohan D </EmpName>
+<email> chandu.d@gmail.com​ </email>
+<salary> 95000 </salary>
+<experience> 6 </experience>
+<designation> Assistant Professor </designation>
+</Emp>
+<Emp>
+<EmpName> Sai </EmpName>
+<email> sai@gmail.com​ </email>
+<salary> 25000 </salary>
+<experience> 4 </experience>
+<designation> Assistant Professor </designation>
+</Emp>
+<Emp>
+<EmpName> Rudraunsh​ </EmpName>
+<email> sai@gmail.com​ </email>
+<salary> 250000​ </salary>
+<experience> 22 </experience>
+<designation> Senior Professor​ </designation>
+</Emp>
+​</CATALOG>

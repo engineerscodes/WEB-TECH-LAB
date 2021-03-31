@@ -1,0 +1,24 @@
+{
+    "Emp_details":[
+    
+                   {
+                       "name":"Chandra Mohan D",
+                       "email":"chandu.d@gmail.com",
+                       "salary":"95000",
+                       "experience":"6"
+                   },
+                   {
+                       "name":"Sai",
+                       "email":"sai@gmail.com​ ",
+                       "salary":"25000",
+                       "experience":"4"
+                   },
+                   {
+                       "name":"Rudraunsh​",
+                       "email":"udraunsh​@gmail.com​",
+                       "salary":"250000​",
+                       "experience":"22"
+                   }
+
+              ]
+}

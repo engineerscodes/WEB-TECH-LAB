@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+  border: 1px solid black;
+}
+    </style>
+</head>
+<body>
+      <div id="table"></div>
+</body>
+<script>
+    function loadxml(){
+    
+    let tab=document.getElementById('table');
+
+    let xhr=new XMLHttpRequest();
+
+    xhr.open("GET","emp_details.xml",true);
+
+    let travel=document.createElement('table')
+
+    let head=document.createElement('tr')
+    let td1=document.createElement('td')
+    td1.innerHTML="EMPNAME"
+    let td2=document.createElement('td')
+    td2.innerHTML="EMAIL " 
+
+    let td3=document.createElement('td')
+    td3.innerHTML='Salary'
+    
+    head.appendChild(td1)
+    head.appendChild(td2)
+    head.appendChild(td3)
+    
+    tab.appendChild(head)
+   
+    xhr.onreadystatechange =function()
+    {
+          xhr.onreadystatechange =function(){
+        if(this.readyState ==4 && this.status ==200)
+        {
+            let resXML=this.responseXML;
+            let username=resXML.getElementsByTagName('Emp')
+            for(let i=0;i<username.length;i++)
+            {  let tr=document.createElement('tr')
+               let x= username[i].getElementsByTagName('EmpName')[0].childNodes[0].nodeValue;
+               let e=username[i].getElementsByTagName('email')[0].childNodes[0].nodeValue;
+               let s=username[i].getElementsByTagName('salary')[0].childNodes[0].nodeValue;
+               let a=document.createElement('a')
+               a.href="mailto:"+e
+               a.innerHTML=e
+                let r1=document.createElement('td')
+                r1.innerHTML=x;
+                let r2=document.createElement('td')
+                r2.appendChild(a)
+                let r3=document.createElement('td')
+                r3.innerHTML=s
+                
+
+                tr.appendChild(r1);
+                tr.appendChild(r2);
+                tr.appendChild(r3);
+                tab.appendChild(tr);
+            }
+        }
+    }
+    }
+    
+    //sends request import 
+    xhr.send();
+
+    }
+
+    //loadxml();
+
+   function loadJson()
+    {
+         
+    let tab=document.getElementById('table');
+
+    let xhr=new XMLHttpRequest();
+
+    xhr.open("GET","empdetails.json",true);
+
+ let travel=document.createElement('table')
+
+    let head=document.createElement('tr')
+    let td1=document.createElement('td')
+    td1.innerHTML="EMPNAME"
+    let td2=document.createElement('td')
+    td2.innerHTML="EMAIL " 
+
+    let td3=document.createElement('td')
+    td3.innerHTML='Salary'
+    let td4=document.createElement('td')
+    td4.innerHTML='EXPERIENCES'
+    head.appendChild(td1)
+    head.appendChild(td2)
+    head.appendChild(td3)
+    head.appendChild(td4)
+
+    tab.appendChild(head)
+    
+    xhr.onreadystatechange =function()
+    {
+           xhr.onreadystatechange =function(){
+                    if(this.readyState ==4 && this.status ==200)
+                    {   
+                       
+                         let resXML=JSON.parse( this.responseText)
+                        
+                         emp=resXML.Emp_details;
+
+                         for(let i=0;i<emp.length ;i++)
+                         {  if(emp[i].experience>5)
+                            { let tr=document.createElement('tr')
+                             let x=emp[i].name;
+                             let e=emp[i].email;
+                             let s=emp[i].salary;
+                             let exp=emp[i].experience;
+                             
+                            let a=document.createElement('a')
+                            a.href="mailto:"+e
+                            a.innerHTML=e
+                            let r1=document.createElement('td')
+                            r1.innerHTML=x;
+                            let r2=document.createElement('td')
+                            r2.appendChild(a)
+                            let r3=document.createElement('td')
+                            r3.innerHTML=s;
+                            let r4=document.createElement('td')
+                            r4.innerHTML=exp;
+
+                            tr.appendChild(r1);
+                            tr.appendChild(r2);
+                            tr.appendChild(r3);
+                            tr.appendChild(r4)
+                            tab.appendChild(tr);
+                         }
+                         }
+
+                     }
+
+
+              }
+    
+
+    }
+
+   xhr.send();
+}
+
+loadJson()
+
+</script>
+</html>
