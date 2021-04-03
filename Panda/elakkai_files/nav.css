@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+       
+}
+.header{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.left{
+    display: grid;
+    grid-template-columns: 180px auto;
+   
+    align-items: center;
+}
+.left div img{
+   margin: 25px 1px 25px 25px;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right div{
+    align-self: flex-end;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin: auto 30px;
+    padding: auto 10px;
+}
+.end{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto 50px auto 10px;
+}
+
+.end div img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto 10px;
+    box-shadow: 2px 15px 2px rgb(104, 104, 104);
+}
+
+.Pain_of_death{
+   margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+
+
+}
+.Pain_of_death .about{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+    color: rgba(255, 94, 1, 0.849);
+}
+
+.Pain_of_death .img-about{
+  display: flex;
+  justify-content: center;
+  
+  
+}
+.Pain_of_death .img-about img{
+    width: 400px;
+    height: 600px;
+    transform: rotate(-10deg);
+
+}
