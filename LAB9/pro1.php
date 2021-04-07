@@ -87,6 +87,7 @@
 
             <h3>LORD OF THE RINGS </h3>
             <h2> price - $50</h2>
+          
 
         </div>
         <div>
