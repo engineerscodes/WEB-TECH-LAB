@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<School>
+
+<Class>
+<number> 001​ </number>
+<strength> 36 </strength>
+</Class>
+
+<Class>
+<number> 002 </number>
+<strength> 33 </strength>
+</Class>
+
+<Class>
+<number> 003 </number>
+<strength> 40 </strength>
+</Class>
+
+<Class>
+<number> 004​ </number>
+<strength> 42 </strength>
+</Class>
+
+<Class>
+<number> 0015 </number>
+<strength> 39 </strength>
+</Class>
+
+</School>

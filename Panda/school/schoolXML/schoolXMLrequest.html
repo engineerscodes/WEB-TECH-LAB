@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19BCD7097 XML Tree</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+     table {
+    border-collapse: collapse;
+    width: 100%;
+    text-transform: uppercase;
+    }
+
+    .blue {
+    border: 2px solid #1ABC9C;
+    }
+
+    .blue thead {
+    background: #1ABC9C;
+    }
+
+    .blue thead:hover {
+    border: 2px solid #9B59B6;
+    background: #9B59B6;
+    }
+
+
+    thead {
+    color: white;
+
+    }
+
+    th,
+    td {
+    text-align: center;
+    padding: 5px 0;
+    }
+
+    th {
+    height: 50px;
+    }
+
+    tbody tr:nth-child(even) {
+    background: #ECF0F1;
+    }
+
+    tbody tr:hover {
+    background: #BDC3C7;
+    color: #FFFFFF;
+    }
+    </style>
+</head>
+<body>
+    <div>
+      
+
+            <table class="blue">
+              <thead>
+                  <tr>
+                      <th> number </th>
+                      <th >strength </th>
+                  </tr>
+              </thead>
+                <tbody id="TB">
+                
+                   
+                </tbody>
+            </table>
+
+     
+      </div>
+</body>
+<script>
+    function loadxml(){
+    
+    
+
+    let xhr=new XMLHttpRequest();
+     let tab=document.getElementById("TB")
+    xhr.open("GET","School.xml",true);
+
+   
+   
+    xhr.onreadystatechange =function()
+    {
+          xhr.onreadystatechange =function(){
+        if(this.readyState ==4 && this.status ==200)
+        {
+            let resXML=this.responseXML;
+            
+            let school=resXML.getElementsByTagName('School');
+           
+            let objclass=resXML.getElementsByTagName('Class');
+             for (let i=0;i<objclass.length;i++)
+             { let tr=document.createElement('tr')
+                 let n=objclass[i].getElementsByTagName('number')[0].childNodes[0].nodeValue
+                  let s=objclass[i].getElementsByTagName('strength')[0].childNodes[0].nodeValue
+
+                   let r1=document.createElement('td')
+                   r1.innerHTML=n;
+                   let r2=document.createElement('td')
+                   r2.innerHTML=s;
+
+
+                   tr.appendChild(r1);
+                   tr.appendChild(r2);
+
+                   tab.appendChild(tr);
+
+             }
+         }
+        
+    }
+    
+ }
+    //sends request import 
+    xhr.send();
+
+    }
+
+    loadxml();
+</script>
+</html>
