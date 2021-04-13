@@ -6,9 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ES6</title>
 </head>
-<body>
+<body style="white-space: pre;">
      <div>
-         
+             <h1>VAR VS LET : SCOPE AND WINDOW OBJECT ATTACHEMENT OF VAR KEYWORD</h1>
+             ` let age=40;
+               var color="red"`
      </div>
+     <br>
+     <hr>
+     <div>
+         <h1> Factory function </h1>
+         `
+          //Factory Functions
+          function createuser(username)
+          {
+          return {
+          name:username,
+          created:function()
+          {
+          console.log("USER CREATED IN DB");
+          }
+          }
+          }
+
+          const user1=createuser("BALA SUB");
+          user1.created();
+          const user2=createuser("SHARMA JI");
+          user2.created();
+         `
+     </div>
+   
 </body>
+  <script>
+      let age=40;
+      var color="red"
+
+      const info={
+          name:"NAVEEN",
+          age :20,
+          personal_info:{
+              address:"G0A",
+              numbers:1234567890
+          },
+
+          call:function()
+          {
+              console.log(this.name)
+          }
+      };
+
+      info.call();
+
+      //Factory Functions
+      function createuser(username)
+      {
+          return {
+              name:username,
+              created:function()
+              {
+                  console.log("USER CREATED IN DB");
+              }
+          }
+      }
+
+      const user1=createuser("BALA SUB");
+      user1.created();
+      const user2=createuser("SHARMA JI");
+      user2.created();
+  </script>
 </html>
