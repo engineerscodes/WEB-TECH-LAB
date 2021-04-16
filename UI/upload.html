@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .modal{
+        
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform:  translate(-50%,-50%) scale(0);
+        border: 2px solid black;
+        border-radius: 10px;
+        z-index: 50;
+        background-color: white;
+        width: 60%;
+       
+        max-width: 80%;
+        }
+         .activemod{
+          transform: translate(-50%,-50%) scale(1) !important;
+        }
+        .modal-header{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-bottom: 1px solid black;
+            margin: 10px 0;
+        }
+
+        .modal-header .title{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.2rem;
+            font-weight: bolder;
+            text-transform: capitalize;
+        }
+
+        .modal-header .btn-close{
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+
+     
+
+        .modal-body {
+          padding: 10px 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+        }
+        .modal-body div{
+            margin-top: 23px;
+        }
+
+        .bg-overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            background-color: rgb(0,0,0,0.6);
+            pointer-events: none;
+        
+         }
+
+         .active{
+             pointer-events: all;
+             opacity: 1;
+           
+         }
+
+         input{
+         color:   #065fd4;
+         }
+         .footermodal{
+             text-align: center;
+             padding: 25px;
+             margin: 15px 0;
+         }
+         .feedback{
+             background: none;
+             border: none;
+             cursor: pointer;
+             outline: none;
+             font-size: 1.5rem;
+             font-weight: bolder;
+             margin-right: 10px;
+
+         }
+        
+    </style>
+</head>
+<body>
+        
+    <div class="container">
+        <button type="button"  id="btn">CLICK ME </button>
+    </div>
+      
+    <div class="modal" >
+      <div class="modal-header">
+          <div class="title">upload videos</div>
+          <div>
+           <button type="button" class="feedback"><img src="./feeback.svg" alt="feedback" title="send feedback"></button>
+          <button type="button" class="btn-close"><img src="./times-solid.svg" alt="close" title="Close"></button>
+          </div>
+      </div>
+     
+      <div class="modal-body ">
+    
+         <div>
+
+             <img src="./upload.svg" >
+         </div>
+         <div>
+             Drag and drop video files to upload
+         </div>
+         <div>
+             <input type="file" name="vdfile" id="">
+         </div>
+     
+          
+      </div>
+      <div class="footermodal" >
+         <p>
+             By submitting your videos to YouTube, you acknowledge that you agree to Dance Club's Terms of Service and
+            Club Guidelines.</p>
+
+            <P> Please be sure not to violate others' copyright or privacy rights. <a
+                    href="https://github.com/Android-Club-VITAP/BEAT-THE-HEAT" target="_blank">Learn more </a> </P>
+         
+
+      </div>
+    </div>
+   
+    <div class="bg-overlay"></div>
+    <script>
+        let modal=document.getElementsByClassName('modal')[0];
+        let btn=document.getElementById('btn');
+
+        let overlay=document.getElementsByClassName('bg-overlay')[0];
+        
+        let btnclose=document.getElementsByClassName('btn-close')[0]
+
+        btnclose.addEventListener('click',()=>{
+           overlay.classList.remove('active');
+           modal.classList.remove('activemod');
+        });
+        
+        btn.addEventListener('click',() =>{
+           
+            modal.classList.add('activemod');
+            overlay.classList.add('active');
+
+        });
+    </script>
+</body>
+</html>
