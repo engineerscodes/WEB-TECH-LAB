@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIT AP</title>
+    <title>get marks</title>
     <style>
         * {
             padding: 0;
@@ -16,6 +16,7 @@
         .NAVEEN {
             display: flex;
             justify-content: center;
+
         }
 
         table {
@@ -80,44 +81,68 @@
         #tds button:hover {
             background-color: #1ABC9C;
         }
+
+        .marks {
+            text-align: center;
+            color: #1ABC9C;
+        }
     </style>
 </head>
+<?php
+$servername = "localhost";
+$user = "root";
+$pass = "";
+$db = "webtachlab";
+$conn = new mysqli($servername, $user, $pass, $db) or die("Unnable to connect");
+
+$reg = $_POST['reg'];
+
+$qeury = "SELECT * FROM marks WHERE RegisterNumbers='$reg'";
+$res = mysqli_query($conn, $qeury);
+?>
 
 <body>
+    <div class="marks">
+        <h1><?php
+         
+            $qeury2 = "SELECT * FROM student_info WHERE RegisterNumber='$reg'";
+
+            $res2 = mysqli_query($conn, $qeury2);
+            while ($output2 = mysqli_fetch_array($res2)) {
+        
+                echo "".$output2['Name'];
+            }
+
+            ?>
+        </h1>
+    </div>
     <div class="NAVEEN">
+
         <table class="blue">
             <thead>
                 <tr>
-                    <th colspan="2"> VIT AP LOGIN SYSTEM </th>
+                    <th> REG NUMBER </th>
+                    <th>Semester </th>
+                    <th> CATNo </th>
+                    <th> SubCode </th>
+                    <th> Mark </th>
                 </tr>
             </thead>
             <tbody id="TB">
-                <tr>
-                    <td>REGISTER NUMBER</td>
-                    <td> <input style="width: 80%;" type="text" name="reg" id="reg"> </td>
-                </tr>
-                <tr>
-                    <td colspan="2" id="tds">
-                        <button type="button" onclick="window.location.href='getmarks.php'"> GET MARKS</button>
-                        <button type=" button" onclick="window.location.href='updatemarks.php'"> UPDATE MARKS</button>
-                        <button type="button" onclick="window.location.href='delete.php'"> DELETE RECORD </button>
-                        <button type="button" onclick="window.location.href='add.php'"> ADD New RECORD</button>
-                    </td>
-                </tr>
+                <?php
 
+                while ($output = mysqli_fetch_array($res)) {
+                    // echo "marks = " . $output['Mark'] . "<br>";
+
+                    echo "<tr><td>" . $output['RegisterNumbers'] . "</td><td>" . $output['Semester'] . "</td><td>" . $output['CATNo'] . "</td><td>" . $output['SubCode'] . "</td><td>" . $output['Mark'] . "</td></tr>";
+                }
+
+                ?>
             </tbody>
         </table>
     </div>
-    <?php
-    $servername = "localhost";
-     $user="root";
-     $pass="";
-     $db= "webtachlab";
-    $conn = new mysqli($servername,$user,$pass,$db) or die("Unnable to connect");
-    echo "DONE"
 
-    
-    ?>
 </body>
+
 
 </html>
