@@ -5,10 +5,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        nav{
+            background-color: #1b1b1b;
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+        }
+        nav::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        nav ul{
+          float: right;
+          list-style: none;
+          margin-right: 40px;
+          position: relative;
+        }
+
+        nav ul li{
+             float: left;
+            display: inline-block;
+            background: #1b1b1b;
+            margin: 0 5px;
+             
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            line-height: 70px;
+            font-size: 18px;
+            padding: 8px 15px;
+            text-transform: uppercase;
+        }
+
+          nav ul li a:hover{
+              box-shadow: 0 0 5px #33ffff,0 0 6px #66ffff;
+              border-radius: 6px;
+              color: cyan;
+          }
+          nav ul li:hover >ul{
+              opacity: 1;
+              visibility: visible;
+              top: 70px;
+          }
+
+        nav ul ul{
+            position: absolute;
+            top: 90px;
+            opacity: 0;
+            visibility: hidden;
+            transition: top 0.3s;
+            border-top: 3px solid cyan;
+        }
+          nav ul ul li a:hover{
+           
+           color: cyan;
+           box-shadow: none;
+
+          }
+        nav ul ul li{
+            position: relative;
+            margin: 0;
+            width: 150px;
+            float: none;
+            display: list-item;
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+        }
+
+        nav .logo{
+            float: left;
+            color: white;
+            font-size: 27px;
+            font-weight: 600;
+            line-height: 70px;
+            padding-left: 60px;
+        }
+            @media only screen and (max-width: 990px){
+
+                nav ul{
+                    margin-right: 0;
+                    float: left;
+                }
+
+                nav .logo{
+                  width: 100%;
+                  padding-left: 30px;
+                }
+                
+                nav ul li ,nav ul ul li {
+                    display: block;
+                    width: 100%;
+                }
+            }
+    </style>
 </head>
 <body>
         <nav>
-            
+            <div class="logo"> HEAT THE BEAT </div>
+           
+            <ul>
+                <li> <a href="#">HOME</a></li>
+                <li><a href="#">UPLOAD</a></li>
+                <li><a > MODE'S</a>
+                    <ul>
+                        <li> <a href="#"> DETAILS</a></li>
+                    </ul>
+                </li>
+                <li> <a  >Account's</a>
+                    <ul>
+                         <li> <a href="#">USERNAME</a></li>
+                        <li> <a href="#">Logout</a></li>
+                       
+                        <li> <a href="#">Feeback</a></li>
+                        <li> <a href="#">T&C</a></li>
+                    </ul>
+                </li>
+                 <li><a href="#">Contact</a></li>
+            </ul>
+
         </nav>
 </body>
 </html>
