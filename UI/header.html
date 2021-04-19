@@ -117,15 +117,22 @@
         @media only screen and (max-width: 990px) {
             nav {
                 overflow-x: hidden;
-               
+                
                
 
             }
-
+            
             nav ul {
                 margin-right: 0px;
                 float: left;  
             }
+
+            #listviewheader {
+             min-height :calc(100vh - 70px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            }
+
 
             nav .logo {
                 width: 100%;
@@ -252,7 +259,7 @@
             <li><a href="#">UPLOAD</a></li>
 
             <li>
-                <label id="modes" for="btn-1" class="showlabel">MODE'S<i class="fas fa-caret-down"></i></label>
+                <label id="modes" for="btn-1" class="showlabel">MODE'S <i class="fas fa-caret-down"></i></label>
                 <a> MODE'S</a>
                 <input type="checkbox" id="btn-1">
                 <ul>
@@ -281,19 +288,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
-    let ullist = document.getElementById('listviewheader')
-    let child = ullist.getElementsByTagName('li');
     $('.icon').click(function () {
         $('span').toggleClass("cancel");
 
-        //for(let i=0;i<child.length;i++) { //child[i].style.height="250px"
-        // child[i].style.height=((screen.height-70)/5)+"px"; 
-
-        // }
-
-        ullist.style.minHeight = (screen.height - 70) + "px";
-        console.log((screen.height - 70))
-        ullist.style.overflowY = "scroll";
     });
 </script>
 
