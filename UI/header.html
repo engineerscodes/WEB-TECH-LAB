@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <script src="https://kit.fontawesome.com/427ff44d09.js" crossorigin="anonymous"></script>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             color: white;
         }
 
-        nav{
+        nav {
             background-color: #1b1b1b;
             position: sticky;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            
+
         }
-        nav::after{
+
+        nav::after {
             content: "";
             clear: both;
             display: table;
         }
 
-        nav ul{
-          float: right;
-          list-style: none;
-          margin-right: 40px;
-          position: relative;
+        nav ul {
+            float: right;
+            list-style: none;
+            margin-right: 40px;
+            position: relative;
         }
 
-        nav ul li{
-             float: left;
+        nav ul li {
+            float: left;
             display: inline-block;
             background: #1b1b1b;
             margin: 0 5px;
-             
+
 
         }
-        nav ul li a{
+
+        nav ul li a {
             text-decoration: none;
             line-height: 70px;
             font-size: 18px;
@@ -51,18 +55,19 @@
             text-transform: uppercase;
         }
 
-          nav ul li a:hover{
-              box-shadow: 0 0 5px #33ffff,0 0 6px #66ffff;
-              border-radius: 6px;
-              color: cyan;
-          }
-          nav ul li:hover >ul{
-              opacity: 1;
-              visibility: visible;
-              top: 70px;
-          }
+        nav ul li a:hover {
+            box-shadow: 0 0 5px #33ffff, 0 0 6px #66ffff;
+            border-radius: 6px;
+            color: cyan;
+        }
 
-        nav ul ul{
+        nav ul li:hover>ul {
+            opacity: 1;
+            visibility: visible;
+            top: 70px;
+        }
+
+        nav ul ul {
             position: absolute;
             top: 90px;
             opacity: 0;
@@ -70,22 +75,24 @@
             transition: top 0.3s;
             border-top: 3px solid cyan;
         }
-          nav ul ul li a:hover{
-           
-           color: cyan;
-           box-shadow: none;
 
-          }
-        nav ul ul li{
+        nav ul ul li a:hover {
+
+            color: cyan;
+            box-shadow: none;
+
+        }
+
+        nav ul ul li {
             position: relative;
             margin: 0;
             width: 150px;
             float: none;
             display: list-item;
-            border-bottom: 1px solid rgba(0,0,0,0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         }
 
-        nav .logo{
+        nav .logo {
             float: left;
             color: white;
             font-size: 27px;
@@ -93,49 +100,198 @@
             line-height: 70px;
             padding-left: 60px;
         }
-            @media only screen and (max-width: 990px){
 
-                nav ul{
-                    margin-right: 0;
-                    float: left;
-                }
+        .showlabel,
+        nav input {
+            display: none;
+        }
+           .icon{
 
-                nav .logo{
-                  width: 100%;
-                  padding-left: 30px;
-                }
-                
-                nav ul li ,nav ul ul li {
-                    display: block;
-                    width: 100%;
-                }
-            }
-    </style>
-</head>
-<body>
-        <nav>
-            <div class="logo"> HEAT THE BEAT </div>
+           display:none;
+    
+
+           }
+      
+
+        @media only screen and (max-width: 990px) {
+           nav{ 
+               overflow-y: hidden;
+               
            
-            <ul>
-                <li> <a href="#">HOME</a></li>
-                <li><a href="#">UPLOAD</a></li>
-                <li><a > MODE'S</a>
-                    <ul>
-                        <li> <a href="#"> DETAILS</a></li>
-                    </ul>
-                </li>
-                <li> <a  >Account's</a>
-                    <ul>
-                         <li> <a href="#">USERNAME</a></li>
-                        <li> <a href="#">Logout</a></li>
-                       
-                        <li> <a href="#">Feeback</a></li>
-                        <li> <a href="#">T&C</a></li>
-                    </ul>
-                </li>
-                 <li><a href="#">Contact</a></li>
-            </ul>
+           }
+           nav ul{
+           margin-right: 0px;
+           float: left;
 
-        </nav>
+           }
+            nav .logo {
+                width: 100%;
+                padding-left: 15px;
+            }
+
+            nav ul li,nav ul ul li {
+                display: block;
+                width: 100%;
+               
+               
+            }
+           
+
+            nav ul ul{
+              top: 70px;
+              border-top: 0px;
+              float: none;
+              position: static;
+              display: none;
+              opacity: 1;
+              visibility: visible;
+            }
+
+            .showlabel{
+                   display: block;
+                   color: white;
+                   font-size: 18px;
+                   padding: 0 20px;
+                   line-height: 70px;
+                   cursor: pointer;
+                   text-transform: uppercase;
+            }
+
+            .showlabel:hover{
+                color: cyan;
+            }
+
+            nav ul li a:hover{
+                box-shadow: none;
+            }
+            nav ul li a{
+              
+              display:flex; 
+           
+              align-items: center; 
+
+            }
+
+               .icon{
+
+               display: block;
+               color: white;
+               line-height: 70px;
+               right: 40px;
+               position: absolute;
+               font-size: 25px;
+               cursor: pointer;
+
+               }
+
+               .showlabel +a,ul{
+                   display: none;
+               }
+                nav ul ul a{
+                padding-left: 40px;
+                }
+               [id^=btn]:checked+ul{
+                   display: block;
+               }
+       
+                  nav ul ul li {
+                  border-bottom: 0px;
+                  }
+
+                  span.cancel:before {
+                  content: '\f00d';
+                  }
+               
+
+               
+
+        }
+
+
+          @media only screen and (max-width: 340px)
+          {
+
+          nav .logo{
+          padding-left: 15px;
+          font-size: 14px;
+
+          }
+           nav ul li a{
+               font-size: 14px;
+           }
+           .showlabel{
+                 font-size: 14px;
+           }
+
+          }
+
+
+
+          
+        
+    </style>
+    
+</head>
+
+<body>
+    <nav>
+        <div class="logo"> HEAT THE BEAT </div>
+         <label for="btn" class="icon" >
+              <span class="fa fa-bars"></span>
+
+         </label>
+           <input type="checkbox" id="btn">
+
+        <ul id="listviewheader">
+            <li> <a href="#">HOME</a></li>
+            <li><a href="#">UPLOAD</a></li>
+
+            <li>
+                <label id="modes" for="btn-1" class="showlabel">MODE'S<i class="fas fa-caret-down"></i></label>
+                <a> MODE'S</a>
+                <input type="checkbox" id="btn-1">
+                <ul>
+                    <li> <a href="#"> DETAILS</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-2" class="showlabel">Account's <i class="fas fa-caret-down"></i></label>
+
+                <a>Account's</a>
+                <input type="checkbox" id="btn-2">
+                <ul>
+                    <li> <a href="#">USERNAME</a></li>
+                    <li> <a href="#">Logout</a></li>
+
+                    <li> <a href="#">Feeback</a></li>
+                    <li> <a href="#">T&C</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script>
+      let ullist=document.getElementById('listviewheader')
+      let child=ullist.getElementsByTagName('li');
+     $('.icon').click(function () {
+         $('span').toggleClass("cancel");
+        
+         //for(let i=0;i<child.length;i++) { //child[i].style.height="250px"
+            // child[i].style.height=((screen.height-70)/5)+"px"; 
+            
+           // }
+
+           ullist.style.height=(screen.height-70)+"px";
+           ullist.style.overflowY="scroll"
+     });
+
+   
+
+ </script>
+
 </html>
