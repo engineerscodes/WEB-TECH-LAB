@@ -105,142 +105,147 @@
         nav input {
             display: none;
         }
-           .icon{
 
-           display:none;
-    
+        .icon {
 
-           }
-      
+            display: none;
+
+
+        }
+
 
         @media only screen and (max-width: 990px) {
-           nav{ 
-               overflow-y: hidden;
+            nav {
+                overflow-x: hidden;
                
-           
-           }
-           nav ul{
-           margin-right: 0px;
-           float: left;
+               
 
-           }
+            }
+
+            nav ul {
+                margin-right: 0px;
+                float: left;  
+            }
+
             nav .logo {
                 width: 100%;
                 padding-left: 15px;
             }
 
-            nav ul li,nav ul ul li {
+            nav ul li,
+            nav ul ul li {
                 display: block;
                 width: 100%;
-               
-               
-            }
-           
 
-            nav ul ul{
-              top: 70px;
-              border-top: 0px;
-              float: none;
-              position: static;
-              display: none;
-              opacity: 1;
-              visibility: visible;
+
             }
 
-            .showlabel{
-                   display: block;
-                   color: white;
-                   font-size: 18px;
-                   padding: 0 20px;
-                   line-height: 70px;
-                   cursor: pointer;
-                   text-transform: uppercase;
+
+            nav ul ul {
+                top: 70px;
+                border-top: 0px;
+                float: none;
+                position: static;
+                display: none;
+                opacity: 1;
+                visibility: visible;
+             
             }
 
-            .showlabel:hover{
+            .showlabel {
+                display: block;
+                color: white;
+                font-size: 18px;
+                padding: 0 20px;
+                line-height: 70px;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+
+            .showlabel:hover {
                 color: cyan;
             }
 
-            nav ul li a:hover{
+            nav ul li a:hover {
                 box-shadow: none;
             }
-            nav ul li a{
-              
-              display:flex; 
-           
-              align-items: center; 
+
+            nav ul li a {
+
+                display: flex;
+
+                align-items: center;
 
             }
 
-               .icon{
+            .icon {
 
-               display: block;
-               color: white;
-               line-height: 70px;
-               right: 40px;
-               position: absolute;
-               font-size: 25px;
-               cursor: pointer;
+                display: block;
+                color: white;
+                line-height: 70px;
+                right: 40px;
+                position: absolute;
+                font-size: 25px;
+                cursor: pointer;
 
-               }
+            }
 
-               .showlabel +a,ul{
-                   display: none;
-               }
-                nav ul ul a{
+            .showlabel+a,
+            ul {
+                display: none;
+            }
+
+            nav ul ul a {
                 padding-left: 40px;
-                }
-               [id^=btn]:checked+ul{
-                   display: block;
-               }
-       
-                  nav ul ul li {
-                  border-bottom: 0px;
-                  }
+            }
 
-                  span.cancel:before {
-                  content: '\f00d';
-                  }
-               
+            [id^=btn]:checked+ul {
+                display: block;
+            }
 
-               
+            nav ul ul li {
+                border-bottom: 0px;
+            }
+
+            span.cancel:before {
+                content: '\f00d';
+            }
+
+
+
 
         }
 
 
-          @media only screen and (max-width: 340px)
-          {
+        @media only screen and (max-width: 340px) {
 
-          nav .logo{
-          padding-left: 15px;
-          font-size: 14px;
+            nav .logo {
+                padding-left: 15px;
+                font-size: 14px;
 
-          }
-           nav ul li a{
-               font-size: 14px;
-           }
-           .showlabel{
-                 font-size: 14px;
-           }
+            }
 
-          }
+            nav ul li a {
+                font-size: 14px;
+            }
 
+            .showlabel {
+                font-size: 14px;
+            }
 
-
-          
-        
+        }
     </style>
-    
+
 </head>
 
 <body>
     <nav>
         <div class="logo"> HEAT THE BEAT </div>
-         <label for="btn" class="icon" >
-              <span class="fa fa-bars"></span>
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
 
-         </label>
-           <input type="checkbox" id="btn">
+        </label>
+        <input type="checkbox" id="btn">
 
         <ul id="listviewheader">
             <li> <a href="#">HOME</a></li>
@@ -275,23 +280,21 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
- <script>
-      let ullist=document.getElementById('listviewheader')
-      let child=ullist.getElementsByTagName('li');
-     $('.icon').click(function () {
-         $('span').toggleClass("cancel");
-        
-         //for(let i=0;i<child.length;i++) { //child[i].style.height="250px"
-            // child[i].style.height=((screen.height-70)/5)+"px"; 
-            
-           // }
+<script>
+    let ullist = document.getElementById('listviewheader')
+    let child = ullist.getElementsByTagName('li');
+    $('.icon').click(function () {
+        $('span').toggleClass("cancel");
 
-           ullist.style.height=(screen.height-70)+"px";
-           ullist.style.overflowY="scroll"
-     });
+        //for(let i=0;i<child.length;i++) { //child[i].style.height="250px"
+        // child[i].style.height=((screen.height-70)/5)+"px"; 
 
-   
+        // }
 
- </script>
+        ullist.style.minHeight = (screen.height - 70) + "px";
+        console.log((screen.height - 70))
+        ullist.style.overflowY = "scroll";
+    });
+</script>
 
 </html>
