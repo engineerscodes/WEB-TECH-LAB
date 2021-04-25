@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sider</title>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<style>
+      *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+      }
+      
+      .asidebar{
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 92px;
+          height: 100vh;
+          background-color:#12192C;
+          color: #FFF;
+          padding: 0 1.5rem;
+          transition: .5s;
+          z-index: 100;
+          min-height: 100vh;
+      }
+
+      .bannersidebar{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+      }
+      
+      
+     
+</style>
+<body>
+    
+     
+      
+      <div class="asidebar">
+              <div id="topfiltericon">
+                    <span class="material-icons" style="font-size: 48px;">
+                          filter_list
+                    </span>
+                    <span>
+                          FILTER
+                    </span>
+              </div>
+            <div class="bannersidebar">
+                 
+                  <div>
+                        <span class="material-icons">
+                              event
+                        </span>
+                        <span> Events   </span>
+                  </div>
+
+                  <div>
+                        <span class="material-icons">
+                              check_box
+                        </span>
+                        <span>VIEWED</span>
+                  </div>
+
+                  <div>
+                        <span class="material-icons">
+                              visibility_off
+                        </span>
+                              <span>UNSEEN</span>
+                  </div>
+
+            </div>
+     </div>
+</body>
+</html>
