@@ -9,27 +9,23 @@
 
       <title>Sidebar sub menus</title>
          <style>
-               /*===== VARIABLES CSS =====*/
+
                :root{
                --nav-width: 92px;
 
-               /*===== Colores =====*/
+
                --first-color: #20dea0;
                --bg-color: rgb(1, 6, 6);
                --sub-color: #B6CEFC;
                --white-color: #FFF;
-
-               /*===== Fuente y tipografia =====*/
-               --body-font: 'Poppins', sans-serif;
                --normal-font-size: 1rem;
                --small-font-size: .875rem;
 
-               /*===== z index =====*/
                --z-fixed: 100;
                }
 
 
-               /*===== BASE =====*/
+              
                *,::before,::after{
                box-sizing: border-box;
                }
@@ -39,10 +35,10 @@
                text-decoration: none;
                }
 
-               /*===== l NAV =====*/
+      
                .l-navbar{
                position: fixed;
-               top: 70px;
+               top: 0px;
                left: 0;
                width: var(--nav-width);
                bottom: 0;
@@ -52,9 +48,8 @@
                transition: .5s;
                z-index: var(--z-fixed);
                }
-
-               /*===== NAV =====*/
-               .nav{
+             
+             .nav{
                height: 100%;
                display: flex;
                flex-direction: column;
@@ -100,32 +95,47 @@
                font-size: var(--small-font-size);
                }
 
-               /*Expander menu*/
                .expander{
                width: calc(var(--nav-width) + 9.25rem);
                }
 
-               /*Add padding body*/
                .body-pd{
                padding: 2rem 0 0 16rem;
                }
 
-               /*Active links menu*/
                .activesider{
                background-color: var(--first-color);
                }
 
-              
-              
-
-               /*Rotate icon*/
                .rotate{
                transform: rotate(180deg);
                }
+             
+             #body-pd{
+             position: relative;
+             margin: 0;
+             padding: 2rem 0 0 6.75rem;
+             transition: .5s;
+             }
+          
+         </style>
+         <style>
+               table {
+                     font-family: arial, sans-serif;
+                     border-collapse: collapse;
+                     width: fit-content;
+                     height: 900px;
+               }
 
-               .topper{
-                     z-index: 9999999999999;
-                     color: white;
+               td,
+               th {
+                     border: 1px solid #dddddd;
+                     text-align: left;
+                     padding: 8px;
+               }
+
+               tr:nth-child(even) {
+                     background-color: #dddddd;
                }
          </style>
          
@@ -134,10 +144,7 @@
 </head>
 
 <body >
-     <div>
-           
-     </div>
- 
+    
       <div id="body-pd">
             <div class="l-navbar" id="navbar">
                   <div class="nav">
@@ -174,7 +181,51 @@
                         </a>
                   </div>
             </div>
+            <h2>HTML Table</h2>
+         <div>
+            <table>
+                  <tr>
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Country</th>
+                  </tr>
+                  <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                  </tr>
+                  <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                  </tr>
+                  <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                  </tr>
+                  <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                  </tr>
+                  <tr>
+                        <td>Laughing Bacchus Winecellars</td>
+                        <td>Yoshi Tannamuri</td>
+                        <td>Canada</td>
+                  </tr>
+                  <tr>
+                        <td>Magazzini Alimentari Riuniti</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>Italy</td>
+                  </tr>
+            </table>
+         
+           
       </div>
+
+            
+
       <script>
             const showMenu = (toggleId, navbarId, bodyId)=>{
             const toggle = document.getElementById(toggleId),
