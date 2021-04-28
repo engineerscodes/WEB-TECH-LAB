@@ -80,8 +80,12 @@ const data = {
       type: "pie",
       data: data,
     };
-
-   var myChart = new Chart(document.getElementById("myChart"), config);
+    
+    let chart= document.getElementById("myChart");
+   var myChart = new Chart(chart, config);
+   chart.style.width="300px"
+   chart.style.height="300px"
+   
 
   })
   .catch((error) => console.log("error", error));
