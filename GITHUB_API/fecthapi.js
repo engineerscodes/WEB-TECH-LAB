@@ -8,7 +8,9 @@
     }
   })
   .then();*/
+let listdata=[];
 
+let listdataCommits=[]
 var myHeaders = new Headers();
 
 myHeaders.append("Cookie", "_octo=GH1.1.2112506239.1613242999; logged_in=no");
@@ -37,20 +39,53 @@ fetch(
       div.style.backgroundColor = " rgba(255, 255, 255, 0.9)";
       let img = document.createElement("img");
       img.src = result[i].author.avatar_url;
+
       img.style.width = "50px";
       img.style.height = "50px";
       img.style.borderRadius = "50%";
       img.style.margin = "auto";
       let h2 = document.createElement("h2");
       h2.innerHTML = result[i].author.login;
+      listdata.push(result[i].author.login);
       let h3 = document.createElement("h3");
       h3.innerHTML = result[i].total;
-
+      listdataCommits.push(result[i].total);
       div.appendChild(img);
       div.appendChild(h2);
       div.appendChild(h3);
 
       dis.appendChild(div);
     }
+
+   
+
+
+const data = {
+  labels:listdata,
+  datasets: [
+    {
+      label: "My First Dataset",
+      data: listdataCommits,
+      backgroundColor: [
+        "rgb(255, 99, 132)",
+        "rgb(54, 162, 235)",
+        "rgb(255, 205, 86)",
+      ],
+      hoverOffset: 4,
+    },
+  ],
+};
+
+    const config = {
+      type: "pie",
+      data: data,
+    };
+
+   var myChart = new Chart(document.getElementById("myChart"), config);
+
   })
   .catch((error) => console.log("error", error));
+
+
+
+
