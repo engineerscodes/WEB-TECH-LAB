@@ -1,6 +1,18 @@
 # WEB-TECH-LAB
 # LINK 
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>WEB-TECH-LAB</title>
+</head>
+<body>
+  <div> HELLO WORLD  </div>
+</body>
+</html>
+```
+
 
 
 <p align="center">
