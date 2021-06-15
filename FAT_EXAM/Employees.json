@@ -1,0 +1,28 @@
+{
+    "employee":[
+        {
+            "EmpID":7185,
+            "EName":"Naveen",
+            "Designation":"DEV",
+            "Address":"Ram nagar betim"
+            
+        },
+        {
+            
+            "EmpID":7,
+            "EName":"BALA",
+            "Designation":"SDC",
+            "Address":"hell"
+            
+        }
+        ,
+        {
+            
+            "EmpID":75,
+            "EName":"Praveen Nishu Loki",
+            "Designation":"King",
+            "Address":"Amul"
+            
+        }
+    ]
+}

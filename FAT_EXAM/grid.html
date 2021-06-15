@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .Cssgrid{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            background-color: rgb(0, 47, 255);
+            grid-gap: 20px;
+            padding: 25px;
+        }
+
+        .Cssgrid div{
+           min-width:  100px;
+            min-height: 100px;
+        }
+
+        #c1{
+            background-color: rgb(10, 126, 49);
+            text-align: center;
+            grid-column: 1/2;
+            grid-row: 1/4;
+        }
+
+           #c2{
+           background-color: rgb(255, 238, 0);
+           text-align: center;
+           grid-column: 2/3;
+           grid-row: 1/2;
+           }
+
+            #c3{
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            grid-column: 3/4;
+            grid-row: 1/2;
+            }
+
+            #c4{
+            background-color: rgb(0, 255, 64);
+            text-align: center;
+            grid-column: 4/5;
+            grid-row: 1/2;
+            }
+
+            #c5{
+            background-color: rgb(255, 2, 2);
+            text-align: center;
+            grid-column: 5/6;
+            grid-row: 1/2;
+            }
+
+              #c6{
+              background-color: rgb(255, 2, 2);
+              text-align: center;
+              grid-column: 2/4;
+              grid-row: 2/3;
+              }
+              #c7{
+              background-color: rgb(0, 255, 255);
+              text-align: center;
+              grid-column: 4/5;
+              grid-row: 2/4;
+              }
+
+              #c8{
+              background-color: rgb(255, 255, 255);
+              text-align: center;
+              grid-column: 5/6;
+              grid-row: 2/3;
+              }
+
+            #c9{
+            background-color: rgb(11, 206, 255);
+            text-align: center;
+            grid-column: 2/3;
+            grid-row: 3/4;
+            }
+
+            #c10{
+            background-color: rgb(143, 53, 228);
+            text-align: center;
+            grid-column: 3/4;
+            grid-row: 3/4;
+            }
+
+            #c11{
+            background-color: rgb(143, 53, 228);
+            text-align: center;
+            grid-column: 5/6;
+            grid-row: 3/4;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="Cssgrid">
+        <div id="c1">1</div>
+        <div id="c2">2</div>
+        <div id="c3">3</div>
+        <div id="c4">4</div>
+        <div id="c5">5</div>
+        <div id="c6">6</div>
+        <div id="c7">7</div>
+        <div id="c8">8</div>
+        <div id="c9">9</div>
+        <div id="c10">10</div>
+        <div id="c11">11</div>
+    </div>
+</body>
+
+</html>

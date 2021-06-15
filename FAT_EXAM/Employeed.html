@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE | NAVEEN</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="output" ng-app="myApp">
+        <h1> list EmpID </h1>
+
+        <div ng-controller="userCtrl">
+            <ul style="color: red;">
+                <div ng-repeat="e in Employee">
+
+                    <li>{{e.EmpID}}</li>
+
+
+                </div>
+            </ul>
+
+            <h1>EMPLOYEE TABLE</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EMPLOYEE NAME</th>
+                        <th>Department </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="e in Employee">
+                        <td><b>{{e.EName}}</b></td>
+                        <td style="color: green;">{{e.Designation}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h1>ADDRESS AND ENAME TABEL</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>EMPLOYEE NAME</th>
+                        <th>ADDRESS </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="e in Employee">
+                        <td><b>{{e.EName}}</b></td>
+                        <td style="color: green;">{{e.Address}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        var fetch = angular.module('myApp', []);
+
+        fetch.controller('userCtrl', ['$scope', '$http', function ($scope, $http) {
+            $http({
+                method: 'get',
+                url: 'Employees.json'
+            }).then(function successCallback(response) {
+                // Store response data
+                //$scope.products = response.data;
+                //console.log(response.data.employee);
+                $scope.Employee = response.data.employee;
+
+            });
+        }]);
+    </script>
+
+</body>
+
+
+</html>
