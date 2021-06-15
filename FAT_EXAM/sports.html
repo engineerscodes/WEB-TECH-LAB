@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container div {
+            margin: auto;
+            text-align: center;
+        }
+
+        .output {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .btn button {
+            margin: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <h1>SPORT'S</h1>
+        </div>
+    </div>
+
+    <div class="output">
+        <div>
+            <ol id="listol">
+                <li>CRICKET</li>
+                <li>SPORT</li>
+                <li>TENNIS</li>
+            </ol>
+        </div>
+    </div>
+    <div class="btn">
+        <button type="button" onclick="add()">add button</button>
+        <button type="button" onclick="remove()">Remove Sport</button>
+        <button type="button" onclick="upd()">Update Date</button>
+    </div>
+    <div class="btn">
+        <label for="name">ENTER NAME : </label> <input type="text" id="name">
+    </div>
+    <script>
+        function add() {
+            let listol = document.getElementById('listol');
+            let childli = listol.querySelectorAll('li');
+
+            let name = document.getElementById('name').value;
+            //console.log(name)
+            //console.log(listol.childNodes)
+            // let ref=listol.childNodes[4];
+            let liele = document.createElement('li');
+            liele.innerHTML = name;
+            console.log(childli);
+            listol.insertBefore(liele, childli[2]);
+        }
+
+        function remove() {
+            let listol = document.getElementById('listol');
+            let childli = listol.querySelectorAll('li');
+            if (childli[0] != null) {
+                listol.removeChild(childli[0]);
+            } else {
+                alert("List is Empty !")
+            }
+
+        }
+
+        function upd() {
+
+            let listol = document.getElementById('listol');
+            let childli = listol.querySelectorAll('li');
+
+            if (childli[1] != null) {
+                childli[1].style.color = "red";
+                for (let i = 0; i < childli.length; i++) {
+                    if (i != 1) {
+                        childli[i].style.color = "black";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
