@@ -23,6 +23,6 @@
   
   
   <p align="center">
- <img src="![image](https://user-images.githubusercontent.com/68312849/124875387-7565a580-dfe6-11eb-8c98-8f40a77dbb96.png)" width="80%" height="500px">
+ <img src="https://user-images.githubusercontent.com/68312849/124875387-7565a580-dfe6-11eb-8c98-8f40a77dbb96.png" width="80%" height="500px">
  
  </p>
