@@ -23,6 +23,6 @@
   
   
   <p align="center">
- <img src="https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_mac.jpg" width="80%" height="500px">
+ <img src="![image](https://user-images.githubusercontent.com/68312849/124875387-7565a580-dfe6-11eb-8c98-8f40a77dbb96.png)" width="80%" height="500px">
  
  </p>
