@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(87, 153, 155);
+            min-height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+      <div>
+          <h1 id="ans"></h1>
+      </div>
+</body>
+   <script>
+       function myDisplayer(some) {
+       document.getElementById("ans").innerHTML = some;
+       }
+
+       function myCalculator(num1, num2, myCallback) {
+       let sum = num1 + num2;
+       myCallback(sum);
+       }
+
+       myCalculator("HELLO", " WORLD ", myDisplayer);
+   </script>
+</html>
